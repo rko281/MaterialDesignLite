@@ -1,0 +1,41 @@
+﻿| package |
+package := Package name: 'MaterialDesignLite'.
+package paxVersion: 1;
+	basicComment: 'Material Design Lite for Seaside
+Created by DuneST
+https://github.com/DuneSt/MaterialDesignLite
+
+Dolphin Smalltalk port created 26th May 2019
+https://github.com/rko281/MaterialDesignLite
+'.
+
+package basicScriptAt: #postinstall put: '
+(WAHttpServerAdaptor port: 8080) start.
+ShellLibrary default shellOpen: ''http://localhost:8080/MDLDemo/'''.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'Material-Design-Lite-Dolphin-Demo'
+	'Material-Design-Lite-Dolphin-Tests').
+
+package setManualPrerequisites: #(
+	'Material-Design-Lite-Dolphin-Demo'
+	'Material-Design-Lite-Dolphin-Tests').
+
+package!
+
+"Class Definitions"!
+
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+"End of package definition"!
+

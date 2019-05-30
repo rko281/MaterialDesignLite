@@ -1,0 +1,89 @@
+﻿| package |
+package := Package name: 'Material-Design-Lite-Extensions-Tests'.
+package paxVersion: 1;
+	basicComment: 'Material Design Lite for Seaside
+Created by DuneST
+https://github.com/DuneSt/MaterialDesignLite
+
+Dolphin Smalltalk port created 26th May 2019
+https://github.com/rko281/MaterialDesignLite'.
+
+
+package classNames
+	add: #MDLFoldButtonTest;
+	add: #MDLLeftPanelResizerTest;
+	add: #MDLMockRootDialogRenderer;
+	add: #MDLPaginationComponentTest;
+	add: #MDLPanelSwitcherButtonTest;
+	add: #MDLRightPanelResizerTest;
+	add: #MDLTRootDialogRendererTest;
+	add: #MDLVerticalToolbarTest;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Seaside\Javascript\Javascript-Core'
+	'Material-Design-Lite-Components'
+	'Material-Design-Lite-Components-Tests'
+	'Material-Design-Lite-Extensions'
+	'..\Portishead\Portishead-Core'
+	'..\Seaside\Seaside\Seaside-Component').
+
+package!
+
+"Class Definitions"!
+
+WAComponent subclass: #MDLMockRootDialogRenderer
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractSeasideTestCase subclass: #MDLFoldButtonTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractSeasideTestCase subclass: #MDLLeftPanelResizerTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractSeasideTestCase subclass: #MDLPaginationComponentTest
+	instanceVariableNames: 'component'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractSeasideTestCase subclass: #MDLPanelSwitcherButtonTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractSeasideTestCase subclass: #MDLRightPanelResizerTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractSeasideTestCase subclass: #MDLTRootDialogRendererTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractSeasideTestCase subclass: #MDLVerticalToolbarTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+"End of package definition"!
+

@@ -1,0 +1,43 @@
+﻿| package |
+package := Package name: 'Material-Design-Lite-Dolphin-Tests'.
+package paxVersion: 1;
+	basicComment: 'Material Design Lite for Seaside
+Created by DuneST
+https://github.com/DuneSt/MaterialDesignLite
+
+Dolphin Smalltalk port created 26th May 2019
+https://github.com/rko281/MaterialDesignLite'.
+
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'Material-Design-Lite-Components-Tests'
+	'Material-Design-Lite-Core-Tests'
+	'Material-Design-Lite-Extensions-Tests'
+	'Material-Design-Lite-Widgets-Tests'
+	'..\Portishead\Portishead-SUnit').
+
+package setManualPrerequisites: #(
+	'Material-Design-Lite-Components-Tests'
+	'Material-Design-Lite-Core-Tests'
+	'Material-Design-Lite-Extensions-Tests'
+	'Material-Design-Lite-Widgets-Tests'
+	'Portishead-SUnit').
+
+package!
+
+"Class Definitions"!
+
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+"End of package definition"!
+

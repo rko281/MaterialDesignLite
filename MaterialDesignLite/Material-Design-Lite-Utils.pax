@@ -1,0 +1,49 @@
+﻿| package |
+package := Package name: 'Material-Design-Lite-Utils'.
+package paxVersion: 1;
+	basicComment: 'Material Design Lite for Seaside
+Created by DuneST
+https://github.com/DuneSt/MaterialDesignLite
+
+Dolphin Smalltalk port created 26th May 2019
+https://github.com/rko281/MaterialDesignLite'.
+
+
+package classNames
+	add: #ManifestMaterialDesignLiteUtils;
+	add: #MDLLibrary;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'..\Portishead\Portishead-Core'
+	'..\Portishead\Portishead-Pragmas'
+	'..\Seaside\Seaside\Seaside-Core').
+
+package!
+
+"Class Definitions"!
+
+WAFileLibrary subclass: #MDLLibrary
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PackageManifest subclass: #ManifestMaterialDesignLiteUtils
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+"End of package definition"!
+

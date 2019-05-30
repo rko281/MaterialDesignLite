@@ -1,0 +1,445 @@
+﻿| package |
+package := Package name: 'Material-Design-Lite-Widgets'.
+package paxVersion: 1;
+	basicComment: 'Material Design Lite for Seaside
+Created by DuneST
+https://github.com/DuneSt/MaterialDesignLite
+
+Dolphin Smalltalk port created 26th May 2019
+https://github.com/rko281/MaterialDesignLite'.
+
+
+package classNames
+	add: #ManifestMaterialDesignLiteWidgets;
+	add: #MDLAbstractFilter;
+	add: #MDLAbstractFooterLinksList;
+	add: #MDLAbstractHeaderSection;
+	add: #MDLAbstractLayoutSection;
+	add: #MDLBeginsWithFilter;
+	add: #MDLCalendar;
+	add: #MDLCardActionsWidget;
+	add: #MDLCardMediaWidget;
+	add: #MDLCardTextContainerWidget;
+	add: #MDLCardTitle;
+	add: #MDLCardWidget;
+	add: #MDLContentCenterer;
+	add: #MDLDatePicker;
+	add: #MDLDialogWidget;
+	add: #MDLFlatDatePicker;
+	add: #MDLFooter;
+	add: #MDLFooterAbstractSection;
+	add: #MDLFooterComponentsSection;
+	add: #MDLFooterDropdownSection;
+	add: #MDLFooterLinksSection;
+	add: #MDLFooterNilSection;
+	add: #MDLHighLevelWidget;
+	add: #MDLIconComponent;
+	add: #MDLIconDrawerSection;
+	add: #MDLInsensitiveBeginsWithFilter;
+	add: #MDLInsensitiveSubstringFilter;
+	add: #MDLLayoutWidget;
+	add: #MDLLinkingLayoutSection;
+	add: #MDLListIconComponent;
+	add: #MDLLoginCardWidget;
+	add: #MDLLoginDialogWidget;
+	add: #MDLLoginWidget;
+	add: #MDLMegaFooterLinksList;
+	add: #MDLMenuButtonWidget;
+	add: #MDLMiniFooterLinksList;
+	add: #MDLNavigationLinkWithIconComponent;
+	add: #MDLNestedList;
+	add: #MDLNestedListTreeNode;
+	add: #MDLNewPasswordWidget;
+	add: #MDLNilLayoutSection;
+	add: #MDLPoll;
+	add: #MDLPollWidget;
+	add: #MDLProgressBarWidget;
+	add: #MDLPseudoRegexFilter;
+	add: #MDLSelectWidget;
+	add: #MDLSimpleDrawerSection;
+	add: #MDLSimpleRowHeaderSection;
+	add: #MDLSmallFooter;
+	add: #MDLSortableTable;
+	add: #MDLSortableTableHeader;
+	add: #MDLSortableTableHeaderElementSortedAscending;
+	add: #MDLSortableTableHeaderElementSortedDescending;
+	add: #MDLSortableTableHeaderElementUnsorted;
+	add: #MDLSortableTableHeaderNumeric;
+	add: #MDLSortableTableHeaderState;
+	add: #MDLSubstringFilter;
+	add: #MDLSwitchWidget;
+	add: #MDLTabWidget;
+	add: #MDLTextAreaWidget;
+	add: #MDLTextFieldWidget;
+	add: #MDLWidget;
+	yourself.
+
+package methodNames
+	add: #BlockClosure -> #mdlCull:cull:;
+	add: #Object -> #asMDLSortableTableHeader;
+	add: #Object -> #asNumericMDLSortableTable;
+	add: #SequenceableCollection -> #groupsOf:;
+	add: #Symbol -> #mdlCull:cull:;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin Legacy Date & Time'
+	'..\Grease\Grease-Core'
+	'Material-Design-Lite-Components'
+	'..\Portishead\Portishead-Core'
+	'..\Seaside\Seaside\Seaside-Canvas'
+	'..\Seaside\Seaside\Seaside-Component'
+	'..\Seaside\Seaside\Seaside-Core').
+
+package!
+
+"Class Definitions"!
+
+Object subclass: #MDLAbstractFilter
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #MDLAbstractFooterLinksList
+	instanceVariableNames: 'links title'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #MDLCalendar
+	instanceVariableNames: 'currentDate firstDayOfWeekIndex yearsInterval'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #MDLFooterAbstractSection
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #MDLNestedListTreeNode
+	instanceVariableNames: 'element children selectedBranch selectedElement'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #MDLSortableTableHeader
+	instanceVariableNames: 'currentState unsortedState cells'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #MDLSortableTableHeaderState
+	instanceVariableNames: 'nextState'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+GRObject subclass: #MDLPoll
+	instanceVariableNames: 'positiveCount negativeCount'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLContentCenterer
+	instanceVariableNames: 'component desktopSize tabletSize phoneSize'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLIconComponent
+	instanceVariableNames: 'iconName'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLListIconComponent
+	instanceVariableNames: 'label helpText'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLNavigationLinkWithIconComponent
+	instanceVariableNames: 'icon label callback iconUrl'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLSortableTable
+	instanceVariableNames: 'title header rows elementsToShow unsortedRows position rowsPerPagePossibilities selectable id ajaxOnCompleteHook tableStyle rowsCache'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLWidget
+	instanceVariableNames: 'id value'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidget subclass: #MDLAbstractLayoutSection
+	instanceVariableNames: 'layout'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidget subclass: #MDLDialogWidget
+	instanceVariableNames: 'title content actions buttonName closeButtonName buttonBrush dialogBrush'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidget subclass: #MDLFooter
+	instanceVariableNames: 'topLeftSection topRightSection middleSection bottomSection'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidget subclass: #MDLHighLevelWidget
+	instanceVariableNames: 'properties'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidget subclass: #MDLLayoutWidget
+	instanceVariableNames: 'title icon headerSection drawerSection contentBlock brush'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidget subclass: #MDLMenuButtonWidget
+	instanceVariableNames: 'textBlock selectedObject objectsPossibilities description action sortBlock buttonContent descriptionPosition'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidget subclass: #MDLNestedList
+	instanceVariableNames: 'elements entryCustomizationHook filteredElements format actionBlock isJsAction selectedEntity helpBlock iconBlock rightIconBlock childrenBlock dragAndDropBlock displayResearchField displayResearchFilter filter listStyle onLoadHook listMaxSize childrenSortBlock'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidget subclass: #MDLProgressBarWidget
+	instanceVariableNames: 'progressionBlock refreshTime hide'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidget subclass: #MDLSelectWidget
+	instanceVariableNames: 'choosingText labelBlock callback selectedObject possibilities description sortBlock autoSubmit customizationBlock entryTooltip'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidget subclass: #MDLSmallFooter
+	instanceVariableNames: 'leftSection rightSection'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidget subclass: #MDLSwitchWidget
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractLayoutSection subclass: #MDLLinkingLayoutSection
+	instanceVariableNames: 'links'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractLayoutSection subclass: #MDLNilLayoutSection
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLLinkingLayoutSection subclass: #MDLAbstractHeaderSection
+	instanceVariableNames: 'brush'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLLinkingLayoutSection subclass: #MDLIconDrawerSection
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLLinkingLayoutSection subclass: #MDLSimpleDrawerSection
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractHeaderSection subclass: #MDLSimpleRowHeaderSection
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLHighLevelWidget subclass: #MDLCardActionsWidget
+	instanceVariableNames: 'componentOrBlocks bordered'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLHighLevelWidget subclass: #MDLCardMediaWidget
+	instanceVariableNames: 'content'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLHighLevelWidget subclass: #MDLCardTextContainerWidget
+	instanceVariableNames: 'content'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLHighLevelWidget subclass: #MDLCardTitle
+	instanceVariableNames: 'level title'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLHighLevelWidget subclass: #MDLCardWidget
+	instanceVariableNames: 'componentOrBlocks cardActions'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLHighLevelWidget subclass: #MDLFlatDatePicker
+	instanceVariableNames: 'daysList calendar callback onCompleteScript'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLHighLevelWidget subclass: #MDLLoginWidget
+	instanceVariableNames: 'titleLabel titleLevel loginLabel passwordLabel login password submitLabel callback cancelLabel cancelCallback'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLHighLevelWidget subclass: #MDLNewPasswordWidget
+	instanceVariableNames: 'currentPassword newPassword badPasswordBlock oldPasswordLabel newPasswordLabel onSuccessBlock confirmPasswordLabel notMatchingPasswordsBlock rightOldPassword pattern errorMessage'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLHighLevelWidget subclass: #MDLPollWidget
+	instanceVariableNames: 'model'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLHighLevelWidget subclass: #MDLTabWidget
+	instanceVariableNames: 'tabs'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLHighLevelWidget subclass: #MDLTextFieldWidget
+	instanceVariableNames: 'label brush isExpandable isFloatingLabel patternErrorMessage errorMessage'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLFlatDatePicker subclass: #MDLDatePicker
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLLoginWidget subclass: #MDLLoginCardWidget
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLLoginWidget subclass: #MDLLoginDialogWidget
+	instanceVariableNames: 'closeId openId signInTitleLabel signInButtonLabel'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLTextFieldWidget subclass: #MDLTextAreaWidget
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractFilter subclass: #MDLBeginsWithFilter
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractFilter subclass: #MDLInsensitiveBeginsWithFilter
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractFilter subclass: #MDLInsensitiveSubstringFilter
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractFilter subclass: #MDLPseudoRegexFilter
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractFilter subclass: #MDLSubstringFilter
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractFooterLinksList subclass: #MDLMegaFooterLinksList
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractFooterLinksList subclass: #MDLMiniFooterLinksList
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLFooterAbstractSection subclass: #MDLFooterComponentsSection
+	instanceVariableNames: 'components'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLFooterAbstractSection subclass: #MDLFooterDropdownSection
+	instanceVariableNames: 'linksLists'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLFooterAbstractSection subclass: #MDLFooterLinksSection
+	instanceVariableNames: 'linksList'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLFooterAbstractSection subclass: #MDLFooterNilSection
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLSortableTableHeader subclass: #MDLSortableTableHeaderNumeric
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLSortableTableHeaderState subclass: #MDLSortableTableHeaderElementSortedAscending
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLSortableTableHeaderState subclass: #MDLSortableTableHeaderElementSortedDescending
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLSortableTableHeaderState subclass: #MDLSortableTableHeaderElementUnsorted
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PackageManifest subclass: #ManifestMaterialDesignLiteWidgets
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!BlockClosure methodsFor!
+
+mdlCull: firstArg cull: secondArg	^ self cull: firstArg cull: secondArg! !
+!BlockClosure categoriesFor: #mdlCull:cull:!*Material/Design/Lite/Widgets!public! !
+
+!Object methodsFor!
+
+asMDLSortableTableHeader	^ MDLSortableTableHeader for: self!
+
+asNumericMDLSortableTable	^ MDLSortableTableHeaderNumeric for: self! !
+!Object categoriesFor: #asMDLSortableTableHeader!*Material/Design/Lite/Widgets!public! !
+!Object categoriesFor: #asNumericMDLSortableTable!*Material/Design/Lite/Widgets!public! !
+
+!SequenceableCollection methodsFor!
+
+groupsOf: n	| grouped index |	grouped := self species new.	index := 1.	[ index > self size ]		whileFalse: [ grouped				add: (self copyFrom: index to: (index + n - 1 min: self size)) asArray.			index := index + n ].	^ grouped! !
+!SequenceableCollection categoriesFor: #groupsOf:!*Material/Design/Lite/Widgets!public! !
+
+!Symbol methodsFor!
+
+mdlCull: anObject cull: anotherObject 	^ self cull: anObject! !
+!Symbol categoriesFor: #mdlCull:cull:!*Material/Design/Lite/Widgets!public! !
+
+"End of package definition"!
+

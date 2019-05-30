@@ -1,0 +1,169 @@
+﻿| package |
+package := Package name: 'Material-Design-Lite-Widgets-Tests'.
+package paxVersion: 1;
+	basicComment: 'Material Design Lite for Seaside
+Created by DuneST
+https://github.com/DuneSt/MaterialDesignLite
+
+Dolphin Smalltalk port created 26th May 2019
+https://github.com/rko281/MaterialDesignLite'.
+
+
+package classNames
+	add: #ManifestMaterialDesignLiteWidgetsTests;
+	add: #MDLAbstractFilterTest;
+	add: #MDLBeginsWithFilterTest;
+	add: #MDLCalendarTest;
+	add: #MDLCardWidgetTests;
+	add: #MDLDatePickerTest;
+	add: #MDLDialogWidgetSimpleWidgetMock;
+	add: #MDLDialogWidgetTests;
+	add: #MDLInsensitiveBeginsWithFilterTest;
+	add: #MDLInsensitiveSubstringFilterTest;
+	add: #MDLListIconComponentTest;
+	add: #MDLMenuButtonWidgetTests;
+	add: #MDLNestedListTest;
+	add: #MDLPollTests;
+	add: #MDLPollWidgetTests;
+	add: #MDLProgressBarWidgetTests;
+	add: #MDLPseudoRegexFilterTest;
+	add: #MDLSelectWidgetTests;
+	add: #MDLSortableTableHeaderTests;
+	add: #MDLSubstringFilterTest;
+	add: #MDLTabsWidgetTest;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin Legacy Date & Time'
+	'..\Seaside\Javascript\Javascript-Core'
+	'Material-Design-Lite-Components'
+	'Material-Design-Lite-Components-Tests'
+	'Material-Design-Lite-Widgets'
+	'..\Portishead\Portishead-Core'
+	'..\Seaside\Seaside\Seaside-Component'
+	'..\Core\Contributions\Camp Smalltalk\SUnit\SUnit').
+
+package!
+
+"Class Definitions"!
+
+WAComponent subclass: #MDLDialogWidgetSimpleWidgetMock
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PackageManifest subclass: #ManifestMaterialDesignLiteWidgetsTests
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #MDLAbstractFilterTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #MDLCalendarTest
+	instanceVariableNames: 'calendar'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #MDLPollTests
+	instanceVariableNames: 'poll'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #MDLPollWidgetTests
+	instanceVariableNames: 'pollWidget'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #MDLSortableTableHeaderTests
+	instanceVariableNames: 'header'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractFilterTest subclass: #MDLBeginsWithFilterTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractFilterTest subclass: #MDLInsensitiveBeginsWithFilterTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractFilterTest subclass: #MDLInsensitiveSubstringFilterTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractFilterTest subclass: #MDLPseudoRegexFilterTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractFilterTest subclass: #MDLSubstringFilterTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractSeasideTestCase subclass: #MDLCardWidgetTests
+	instanceVariableNames: 'card'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractSeasideTestCase subclass: #MDLDatePickerTest
+	instanceVariableNames: 'calendar'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractSeasideTestCase subclass: #MDLDialogWidgetTests
+	instanceVariableNames: 'dialog'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractSeasideTestCase subclass: #MDLListIconComponentTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractSeasideTestCase subclass: #MDLMenuButtonWidgetTests
+	instanceVariableNames: 'menu'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractSeasideTestCase subclass: #MDLNestedListTest
+	instanceVariableNames: 'list'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractSeasideTestCase subclass: #MDLProgressBarWidgetTests
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractSeasideTestCase subclass: #MDLSelectWidgetTests
+	instanceVariableNames: 'select'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractSeasideTestCase subclass: #MDLTabsWidgetTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+"End of package definition"!
+

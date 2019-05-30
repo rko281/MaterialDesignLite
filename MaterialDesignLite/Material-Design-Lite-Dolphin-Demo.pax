@@ -1,0 +1,92 @@
+﻿| package |
+package := Package name: 'Material-Design-Lite-Dolphin-Demo'.
+package paxVersion: 1;
+	basicComment: 'Material Design Lite for Seaside
+Created by DuneST
+https://github.com/DuneSt/MaterialDesignLite
+
+Dolphin Smalltalk port created 26th May 2019
+https://github.com/rko281/MaterialDesignLite
+
+"Launch the Demo"
+(WAHttpServerAdaptor port: 8080) start.
+ShellLibrary default shellOpen: ''http://localhost:8080/MDLDemo/'''.
+
+
+package methodNames
+	add: #Association -> #ifEmpty:;
+	add: #String -> #asMenuBitmap;
+	add: 'MDLComponentDemo class' -> #icon;
+	add: 'MDLDemoScreen class' -> #iconImageIndex;
+	add: 'MDLWidgetDemo class' -> #icon;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'Material-Design-Lite-Core'
+	'Material-Design-Lite-Demo'
+	'Material-Design-Lite-Dolphin-Extensions'
+	'..\Seaside\Seaside\Seaside-Component'
+	'..\Seaside\Seaside\Seaside-Dolphin-Welcome').
+
+package setManualPrerequisites: #(
+	'Material-Design-Lite-Dolphin-Extensions'
+	'Seaside-Dolphin-Welcome').
+
+package!
+
+"Class Definitions"!
+
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!Association methodsFor!
+
+ifEmpty: aBlock
+
+	"Necessary since CompiledMethod>>name returns methodClass>selector association, not selector"
+
+	^self! !
+!Association categoriesFor: #ifEmpty:!public! !
+
+!MDLComponentDemo class methodsFor!
+
+icon
+	^MDLScreen icon! !
+!MDLComponentDemo class categoriesFor: #icon!public! !
+
+!MDLDemoScreen class methodsFor!
+
+iconImageIndex
+
+	"Avoid issues with overriding of icon in this hierarchy"
+
+	^WAComponent iconImageIndex! !
+!MDLDemoScreen class categoriesFor: #iconImageIndex!public! !
+
+!MDLWidgetDemo class methodsFor!
+
+icon
+	^MDLScreen icon! !
+!MDLWidgetDemo class categoriesFor: #icon!public! !
+
+!String methodsFor!
+
+asMenuBitmap
+
+	"This is just here to handle the IDE's autocomplete menu tripping up when trying to display an MDLDemoScreen subclass which returns a Symbol for #icon"
+
+	^MDLScreen icon asMenuBitmap! !
+!String categoriesFor: #asMenuBitmap!converting!public! !
+
+"End of package definition"!
+

@@ -1,0 +1,1670 @@
+﻿| package |
+package := Package name: 'Material-Design-Lite-Components'.
+package paxVersion: 1;
+	basicComment: 'Material Design Lite for Seaside
+Created by DuneST
+https://github.com/DuneSt/MaterialDesignLite
+
+Dolphin Smalltalk port created 26th May 2019
+https://github.com/rko281/MaterialDesignLite'.
+
+
+package classNames
+	add: #ManifestMaterialDesignLiteComponents;
+	add: #MDLAnchorButton;
+	add: #MDLBadge;
+	add: #MDLButton;
+	add: #MDLCardActions;
+	add: #MDLCardInnerDiv;
+	add: #MDLCardMedia;
+	add: #MDLCardMenu;
+	add: #MDLCardSubtitleText;
+	add: #MDLCardTag;
+	add: #MDLCardTextContainer;
+	add: #MDLCardTitleContainer;
+	add: #MDLCardTitleText;
+	add: #MDLCell;
+	add: #MDLCheckbox;
+	add: #MDLCheckboxContainer;
+	add: #MDLCheckboxLabel;
+	add: #MDLChipImage;
+	add: #MDLChipInitial;
+	add: #MDLChipTag;
+	add: #MDLChipTextTag;
+	add: #MDLDialog;
+	add: #MDLDialogActions;
+	add: #MDLDialogContent;
+	add: #MDLDialogTitle;
+	add: #MDLDivTag;
+	add: #MDLGrid;
+	add: #MDLIcon;
+	add: #MDLIconBadge;
+	add: #MDLIconToggle;
+	add: #MDLIconToggleContainer;
+	add: #MDLLayout;
+	add: #MDLLayoutContent;
+	add: #MDLLayoutDrawer;
+	add: #MDLLayoutHeader;
+	add: #MDLLayoutHeaderRow;
+	add: #MDLLayoutIcon;
+	add: #MDLLayoutSpacer;
+	add: #MDLLayoutTab;
+	add: #MDLLayoutTabBar;
+	add: #MDLLayoutTabPanel;
+	add: #MDLLayoutTitle;
+	add: #MDLList;
+	add: #MDLListItem;
+	add: #MDLListItemSecondaryAction;
+	add: #MDLListItemSecondaryInfo;
+	add: #MDLListItemSubTitle;
+	add: #MDLListItemTextBody;
+	add: #MDLListPrimaryContent;
+	add: #MDLListSecondaryContent;
+	add: #MDLLogo;
+	add: #MDLMegaFooter;
+	add: #MDLMegaFooterBottomSection;
+	add: #MDLMegaFooterDropdownSection;
+	add: #MDLMegaFooterHeading;
+	add: #MDLMegaFooterHeadingCheckBox;
+	add: #MDLMegaFooterLeftSection;
+	add: #MDLMegaFooterLinkList;
+	add: #MDLMegaFooterMiddleSection;
+	add: #MDLMegaFooterRightSection;
+	add: #MDLMegaFooterSocialButton;
+	add: #MDLMegaFooterTopSection;
+	add: #MDLMenu;
+	add: #MDLMenuItem;
+	add: #MDLMiniFooter;
+	add: #MDLMiniFooterLeftSection;
+	add: #MDLMiniFooterLinkList;
+	add: #MDLMiniFooterRightSection;
+	add: #MDLMiniFooterSocialButton;
+	add: #MDLNavigation;
+	add: #MDLNavigationLink;
+	add: #MDLProgressBar;
+	add: #MDLRadioButton;
+	add: #MDLRadioContainer;
+	add: #MDLRadioLabel;
+	add: #MDLSlider;
+	add: #MDLSliderContainer;
+	add: #MDLSnackbar;
+	add: #MDLSnackbarAction;
+	add: #MDLSnackbarText;
+	add: #MDLSpinner;
+	add: #MDLSwitch;
+	add: #MDLSwitchContainer;
+	add: #MDLSwitchLabel;
+	add: #MDLTable;
+	add: #MDLTableCell;
+	add: #MDLTableHeadingCell;
+	add: #MDLTabsContainer;
+	add: #MDLTabsPanel;
+	add: #MDLTabsTab;
+	add: #MDLTabsTabBar;
+	add: #MDLTextArea;
+	add: #MDLTextFieldContainer;
+	add: #MDLTextFieldError;
+	add: #MDLTextFieldExpandableHolder;
+	add: #MDLTextFieldInput;
+	add: #MDLTextFieldLabel;
+	add: #MDLTooltip;
+	add: #TMDLButton;
+	yourself.
+
+package methodNames
+	add: #JSObject -> #js;
+	add: #String -> #js;
+	add: #Time -> #forHtmlTextArea;
+	add: #WABrush -> #canvas;
+	add: #WAHtmlCanvas -> #mdlAnchorButton;
+	add: #WAHtmlCanvas -> #mdlBadge;
+	add: #WAHtmlCanvas -> #mdlBadge:;
+	add: #WAHtmlCanvas -> #mdlButton;
+	add: #WAHtmlCanvas -> #mdlButton:;
+	add: #WAHtmlCanvas -> #mdlCard;
+	add: #WAHtmlCanvas -> #mdlCard:;
+	add: #WAHtmlCanvas -> #mdlCardActions;
+	add: #WAHtmlCanvas -> #mdlCardActions:;
+	add: #WAHtmlCanvas -> #mdlCardMedia;
+	add: #WAHtmlCanvas -> #mdlCardMedia:;
+	add: #WAHtmlCanvas -> #mdlCardMenu;
+	add: #WAHtmlCanvas -> #mdlCardMenu:;
+	add: #WAHtmlCanvas -> #mdlCardSubtitleText;
+	add: #WAHtmlCanvas -> #mdlCardSubtitleText:;
+	add: #WAHtmlCanvas -> #mdlCardTextContainer;
+	add: #WAHtmlCanvas -> #mdlCardTextContainer:;
+	add: #WAHtmlCanvas -> #mdlCardTitleContainer;
+	add: #WAHtmlCanvas -> #mdlCardTitleContainer:;
+	add: #WAHtmlCanvas -> #mdlCardTitleText;
+	add: #WAHtmlCanvas -> #mdlCardTitleText:;
+	add: #WAHtmlCanvas -> #mdlCardTitleText:level:;
+	add: #WAHtmlCanvas -> #mdlCell;
+	add: #WAHtmlCanvas -> #mdlCell:;
+	add: #WAHtmlCanvas -> #mdlCell:desktopSize:;
+	add: #WAHtmlCanvas -> #mdlCell:phoneSize:;
+	add: #WAHtmlCanvas -> #mdlCell:size:;
+	add: #WAHtmlCanvas -> #mdlCell:tabletSize:;
+	add: #WAHtmlCanvas -> #mdlCellDesktop:tablet:phone:;
+	add: #WAHtmlCanvas -> #mdlCellDesktop:tablet:phone:with:;
+	add: #WAHtmlCanvas -> #mdlCheckbox;
+	add: #WAHtmlCanvas -> #mdlCheckboxContainer;
+	add: #WAHtmlCanvas -> #mdlCheckboxLabel;
+	add: #WAHtmlCanvas -> #mdlCheckboxLabel:;
+	add: #WAHtmlCanvas -> #mdlChip;
+	add: #WAHtmlCanvas -> #mdlChip:;
+	add: #WAHtmlCanvas -> #mdlChipContact;
+	add: #WAHtmlCanvas -> #mdlChipContact:;
+	add: #WAHtmlCanvas -> #mdlChipImage;
+	add: #WAHtmlCanvas -> #mdlChipText;
+	add: #WAHtmlCanvas -> #mdlChipText:;
+	add: #WAHtmlCanvas -> #mdlDialog;
+	add: #WAHtmlCanvas -> #mdlDialogActions;
+	add: #WAHtmlCanvas -> #mdlDialogActions:;
+	add: #WAHtmlCanvas -> #mdlDialogContent;
+	add: #WAHtmlCanvas -> #mdlDialogContent:;
+	add: #WAHtmlCanvas -> #mdlDialogDisagreeButton;
+	add: #WAHtmlCanvas -> #mdlDialogTitle;
+	add: #WAHtmlCanvas -> #mdlDialogTitle:;
+	add: #WAHtmlCanvas -> #mdlDiv;
+	add: #WAHtmlCanvas -> #mdlDiv:;
+	add: #WAHtmlCanvas -> #mdlFooter;
+	add: #WAHtmlCanvas -> #mdlFooter:;
+	add: #WAHtmlCanvas -> #mdlFooterBottomSection;
+	add: #WAHtmlCanvas -> #mdlFooterBottomSection:;
+	add: #WAHtmlCanvas -> #mdlFooterDropdownSection;
+	add: #WAHtmlCanvas -> #mdlFooterDropdownSection:;
+	add: #WAHtmlCanvas -> #mdlFooterHeading;
+	add: #WAHtmlCanvas -> #mdlFooterHeading:;
+	add: #WAHtmlCanvas -> #mdlFooterHeadingCheckbox;
+	add: #WAHtmlCanvas -> #mdlFooterLeftSection;
+	add: #WAHtmlCanvas -> #mdlFooterLeftSection:;
+	add: #WAHtmlCanvas -> #mdlFooterLinkList;
+	add: #WAHtmlCanvas -> #mdlFooterLinkList:;
+	add: #WAHtmlCanvas -> #mdlFooterLogo;
+	add: #WAHtmlCanvas -> #mdlFooterLogo:;
+	add: #WAHtmlCanvas -> #mdlFooterMiddleSection;
+	add: #WAHtmlCanvas -> #mdlFooterMiddleSection:;
+	add: #WAHtmlCanvas -> #mdlFooterRightSection;
+	add: #WAHtmlCanvas -> #mdlFooterRightSection:;
+	add: #WAHtmlCanvas -> #mdlFooterSocialButton;
+	add: #WAHtmlCanvas -> #mdlFooterSocialButton:;
+	add: #WAHtmlCanvas -> #mdlFooterTopSection;
+	add: #WAHtmlCanvas -> #mdlFooterTopSection:;
+	add: #WAHtmlCanvas -> #mdlGrid;
+	add: #WAHtmlCanvas -> #mdlGrid:;
+	add: #WAHtmlCanvas -> #mdlIcon;
+	add: #WAHtmlCanvas -> #mdlIcon:;
+	add: #WAHtmlCanvas -> #mdlIconBadge;
+	add: #WAHtmlCanvas -> #mdlIconBadge:;
+	add: #WAHtmlCanvas -> #mdlIconToggle;
+	add: #WAHtmlCanvas -> #mdlIconToggleContainer;
+	add: #WAHtmlCanvas -> #mdlIconToggleLabel;
+	add: #WAHtmlCanvas -> #mdlIconToggleLabel:;
+	add: #WAHtmlCanvas -> #mdlLayout;
+	add: #WAHtmlCanvas -> #mdlLayout:;
+	add: #WAHtmlCanvas -> #mdlLayoutContent;
+	add: #WAHtmlCanvas -> #mdlLayoutContent:;
+	add: #WAHtmlCanvas -> #mdlLayoutDrawer;
+	add: #WAHtmlCanvas -> #mdlLayoutDrawer:;
+	add: #WAHtmlCanvas -> #mdlLayoutHeader;
+	add: #WAHtmlCanvas -> #mdlLayoutHeader:;
+	add: #WAHtmlCanvas -> #mdlLayoutHeaderRow;
+	add: #WAHtmlCanvas -> #mdlLayoutHeaderRow:;
+	add: #WAHtmlCanvas -> #mdlLayoutIcon;
+	add: #WAHtmlCanvas -> #mdlLayoutIcon:;
+	add: #WAHtmlCanvas -> #mdlLayoutSpacer;
+	add: #WAHtmlCanvas -> #mdlLayoutSpacer:;
+	add: #WAHtmlCanvas -> #mdlLayoutTab;
+	add: #WAHtmlCanvas -> #mdlLayoutTab:;
+	add: #WAHtmlCanvas -> #mdlLayoutTabBar;
+	add: #WAHtmlCanvas -> #mdlLayoutTabBar:;
+	add: #WAHtmlCanvas -> #mdlLayoutTabPanel;
+	add: #WAHtmlCanvas -> #mdlLayoutTabPanel:;
+	add: #WAHtmlCanvas -> #mdlLayoutTitle;
+	add: #WAHtmlCanvas -> #mdlLayoutTitle:;
+	add: #WAHtmlCanvas -> #mdlList;
+	add: #WAHtmlCanvas -> #mdlList:;
+	add: #WAHtmlCanvas -> #mdlListAvatar;
+	add: #WAHtmlCanvas -> #mdlListAvatar:;
+	add: #WAHtmlCanvas -> #mdlListIcon;
+	add: #WAHtmlCanvas -> #mdlListIcon:;
+	add: #WAHtmlCanvas -> #mdlListItem;
+	add: #WAHtmlCanvas -> #mdlListItem:;
+	add: #WAHtmlCanvas -> #mdlListItemSecondaryAction;
+	add: #WAHtmlCanvas -> #mdlListItemSecondaryAction:;
+	add: #WAHtmlCanvas -> #mdlListItemSecondaryInfo;
+	add: #WAHtmlCanvas -> #mdlListItemSecondaryInfo:;
+	add: #WAHtmlCanvas -> #mdlListItemSubTitle;
+	add: #WAHtmlCanvas -> #mdlListItemSubTitle:;
+	add: #WAHtmlCanvas -> #mdlListItemTextBody;
+	add: #WAHtmlCanvas -> #mdlListItemTextBody:;
+	add: #WAHtmlCanvas -> #mdlListPrimaryContent;
+	add: #WAHtmlCanvas -> #mdlListPrimaryContent:;
+	add: #WAHtmlCanvas -> #mdlListSecondaryContent;
+	add: #WAHtmlCanvas -> #mdlListSecondaryContent:;
+	add: #WAHtmlCanvas -> #mdlLogo;
+	add: #WAHtmlCanvas -> #mdlLogo:;
+	add: #WAHtmlCanvas -> #mdlMenu;
+	add: #WAHtmlCanvas -> #mdlMenuItem;
+	add: #WAHtmlCanvas -> #mdlMenuItem:;
+	add: #WAHtmlCanvas -> #mdlMiniFooter;
+	add: #WAHtmlCanvas -> #mdlMiniFooter:;
+	add: #WAHtmlCanvas -> #mdlMiniFooterLeftSection;
+	add: #WAHtmlCanvas -> #mdlMiniFooterLeftSection:;
+	add: #WAHtmlCanvas -> #mdlMiniFooterLinkList;
+	add: #WAHtmlCanvas -> #mdlMiniFooterLinkList:;
+	add: #WAHtmlCanvas -> #mdlMiniFooterRightSection;
+	add: #WAHtmlCanvas -> #mdlMiniFooterRightSection:;
+	add: #WAHtmlCanvas -> #mdlMiniFooterSocialButton;
+	add: #WAHtmlCanvas -> #mdlMiniFooterSocialButton:;
+	add: #WAHtmlCanvas -> #mdlNavigation;
+	add: #WAHtmlCanvas -> #mdlNavigation:;
+	add: #WAHtmlCanvas -> #mdlNavigationLink;
+	add: #WAHtmlCanvas -> #mdlNavigationLink:;
+	add: #WAHtmlCanvas -> #mdlProgressBar;
+	add: #WAHtmlCanvas -> #mdlRadioButton;
+	add: #WAHtmlCanvas -> #mdlRadioContainer;
+	add: #WAHtmlCanvas -> #mdlRadioLabel:;
+	add: #WAHtmlCanvas -> #mdlSlider;
+	add: #WAHtmlCanvas -> #mdlSliderContainer;
+	add: #WAHtmlCanvas -> #mdlSliderContainer:;
+	add: #WAHtmlCanvas -> #mdlSnackbar;
+	add: #WAHtmlCanvas -> #mdlSnackbarButtonFor:;
+	add: #WAHtmlCanvas -> #mdlSnackbarWithId:;
+	add: #WAHtmlCanvas -> #mdlSpinner;
+	add: #WAHtmlCanvas -> #mdlSwitch;
+	add: #WAHtmlCanvas -> #mdlSwitchContainer;
+	add: #WAHtmlCanvas -> #mdlSwitchLabel;
+	add: #WAHtmlCanvas -> #mdlSwitchLabel:;
+	add: #WAHtmlCanvas -> #mdlTab;
+	add: #WAHtmlCanvas -> #mdlTab:;
+	add: #WAHtmlCanvas -> #mdlTabBar;
+	add: #WAHtmlCanvas -> #mdlTabBar:;
+	add: #WAHtmlCanvas -> #mdlTable;
+	add: #WAHtmlCanvas -> #mdlTable:;
+	add: #WAHtmlCanvas -> #mdlTableCell;
+	add: #WAHtmlCanvas -> #mdlTableCell:;
+	add: #WAHtmlCanvas -> #mdlTableHeading;
+	add: #WAHtmlCanvas -> #mdlTableHeading:;
+	add: #WAHtmlCanvas -> #mdlTabs;
+	add: #WAHtmlCanvas -> #mdlTabs:;
+	add: #WAHtmlCanvas -> #mdlTabsPanel;
+	add: #WAHtmlCanvas -> #mdlTabsPanel:;
+	add: #WAHtmlCanvas -> #mdlTextArea;
+	add: #WAHtmlCanvas -> #mdlTextArea:;
+	add: #WAHtmlCanvas -> #mdlTextFieldContainer;
+	add: #WAHtmlCanvas -> #mdlTextFieldContainer:;
+	add: #WAHtmlCanvas -> #mdlTextFieldError:;
+	add: #WAHtmlCanvas -> #mdlTextFieldExpandableHolder;
+	add: #WAHtmlCanvas -> #mdlTextFieldExpandableHolder:;
+	add: #WAHtmlCanvas -> #mdlTextFieldInput;
+	add: #WAHtmlCanvas -> #mdlTextFieldLabel;
+	add: #WAHtmlCanvas -> #mdlTextFieldLabel:;
+	add: #WAHtmlCanvas -> #mdlTooltip;
+	add: #WARadioGroup -> #mdlRadioButton;
+	add: #WATableHeadingTag -> #sortedAscending;
+	add: #WATableHeadingTag -> #sortedDescending;
+	add: #WATagBrush -> #beCell;
+	add: #WATagBrush -> #beCell:;
+	add: #WATagBrush -> #beCell:phoneSize:;
+	add: #WATagBrush -> #beCell:phoneSize:tabletSize:;
+	add: #WATagBrush -> #beCell:tabletSize:;
+	add: #WATagBrush -> #beChipDecoration;
+	add: #WATagBrush -> #beGrid;
+	add: #WATagBrush -> #mdlBackgroundColorAccent;
+	add: #WATagBrush -> #mdlBackgroundColorPrimary;
+	add: #WATagBrush -> #mdlBackgroundColorPrimaryDark;
+	add: #WATagBrush -> #mdlTextColorAccent;
+	add: #WATagBrush -> #mdlTextColorPrimary;
+	add: #WATagBrush -> #mdlTextColorPrimaryDark;
+	add: #WATagBrush -> #mdlTypographyBody1;
+	add: #WATagBrush -> #mdlTypographyBody1ColorContrast;
+	add: #WATagBrush -> #mdlTypographyBody1ForcePreferredFont;
+	add: #WATagBrush -> #mdlTypographyBody1ForcePreferredFontColorContrast;
+	add: #WATagBrush -> #mdlTypographyBody2;
+	add: #WATagBrush -> #mdlTypographyBody2ColorContrast;
+	add: #WATagBrush -> #mdlTypographyBody2ForcePreferredFont;
+	add: #WATagBrush -> #mdlTypographyBody2ForcePreferredFontColorContrast;
+	add: #WATagBrush -> #mdlTypographyButton;
+	add: #WATagBrush -> #mdlTypographyButtonColorContrast;
+	add: #WATagBrush -> #mdlTypographyCaption;
+	add: #WATagBrush -> #mdlTypographyCaptionColorContrast;
+	add: #WATagBrush -> #mdlTypographyCaptionForcePreferredFont;
+	add: #WATagBrush -> #mdlTypographyCaptionForcePreferredFontColorContrast;
+	add: #WATagBrush -> #mdlTypographyDisplay1;
+	add: #WATagBrush -> #mdlTypographyDisplay1ColorContrast;
+	add: #WATagBrush -> #mdlTypographyDisplay2;
+	add: #WATagBrush -> #mdlTypographyDisplay2ColorContrast;
+	add: #WATagBrush -> #mdlTypographyDisplay3;
+	add: #WATagBrush -> #mdlTypographyDisplay3ColorContrast;
+	add: #WATagBrush -> #mdlTypographyDisplay4;
+	add: #WATagBrush -> #mdlTypographyDisplay4ColorContrast;
+	add: #WATagBrush -> #mdlTypographyFontBlack;
+	add: #WATagBrush -> #mdlTypographyFontBold;
+	add: #WATagBrush -> #mdlTypographyFontLight;
+	add: #WATagBrush -> #mdlTypographyFontMedium;
+	add: #WATagBrush -> #mdlTypographyFontRegular;
+	add: #WATagBrush -> #mdlTypographyFontThin;
+	add: #WATagBrush -> #mdlTypographyHeadline;
+	add: #WATagBrush -> #mdlTypographyHeadlineColorContrast;
+	add: #WATagBrush -> #mdlTypographyMenu;
+	add: #WATagBrush -> #mdlTypographyMenuColorContrast;
+	add: #WATagBrush -> #mdlTypographySubhead;
+	add: #WATagBrush -> #mdlTypographySubheadColorContrast;
+	add: #WATagBrush -> #mdlTypographyTextCapitalize;
+	add: #WATagBrush -> #mdlTypographyTextCenter;
+	add: #WATagBrush -> #mdlTypographyTextJustify;
+	add: #WATagBrush -> #mdlTypographyTextLeft;
+	add: #WATagBrush -> #mdlTypographyTextLowercase;
+	add: #WATagBrush -> #mdlTypographyTextNowrap;
+	add: #WATagBrush -> #mdlTypographyTextRight;
+	add: #WATagBrush -> #mdlTypographyTextUppercase;
+	add: #WATagBrush -> #mdlTypographyTitle;
+	add: #WATagBrush -> #mdlTypographyTitleColorContrast;
+	add: #WATagBrush -> #onChange:if:;
+	add: #WATagBrush -> #onClick:if:;
+	add: #WATagBrush -> #openDialogWithId:;
+	add: #WATagBrush -> #openDialogWithId:if:;
+	add: #WATagBrush -> #shadow:;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin Legacy Date & Time'
+	'..\Grease\Grease-Core'
+	'..\Seaside\Javascript\Javascript-Core'
+	'..\Portishead\Portishead-Core'
+	'..\Portishead\Portishead-Traits'
+	'..\Seaside\Seaside\Seaside-Canvas').
+
+package!
+
+"Class Definitions"!
+
+WATagBrush subclass: #MDLCheckboxLabel
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLChipInitial
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLChipTag
+	instanceVariableNames: 'hasContactTag'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLChipTextTag
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLDialog
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLDivTag
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLIcon
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLLayoutContent
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLLayoutHeader
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLLayoutTitle
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLListItem
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLListItemSecondaryInfo
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLListItemSubTitle
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLListItemTextBody
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLListPrimaryContent
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLListSecondaryContent
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLMegaFooter
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLMenuItem
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLMiniFooter
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLNavigation
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLRadioLabel
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLSwitchLabel
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLTextFieldError
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATagBrush subclass: #MDLTooltip
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLBadge
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLCardInnerDiv
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLCardMenu
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLCardSubtitleText
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLCardTag
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLCell
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLDialogActions
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLDialogContent
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLGrid
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLLayout
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLLayoutDrawer
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLLayoutHeaderRow
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLLayoutIcon
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLLayoutSpacer
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLLayoutTabBar
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLLayoutTabPanel
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLLogo
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLMegaFooterBottomSection
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLMegaFooterDropdownSection
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLMegaFooterLeftSection
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLMegaFooterMiddleSection
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLMegaFooterRightSection
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLMegaFooterTopSection
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLMiniFooterLeftSection
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLMiniFooterRightSection
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLProgressBar
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLSliderContainer
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLSnackbar
+	instanceVariableNames: 'message timeout actionText action'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLSnackbarText
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLSpinner
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLTabsContainer
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLTabsPanel
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLTabsTabBar
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLTextFieldContainer
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLTextFieldExpandableHolder
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLBadge subclass: #MDLIconBadge
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLCardInnerDiv subclass: #MDLCardActions
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLCardInnerDiv subclass: #MDLCardMedia
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLCardInnerDiv subclass: #MDLCardTextContainer
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLCardInnerDiv subclass: #MDLCardTitleContainer
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAAnchorTag subclass: #MDLAnchorButton
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAAnchorTag subclass: #MDLLayoutTab
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAAnchorTag subclass: #MDLListItemSecondaryAction
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAAnchorTag subclass: #MDLNavigationLink
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAAnchorTag subclass: #MDLTabsTab
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAUnorderedListTag subclass: #MDLList
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAUnorderedListTag subclass: #MDLMegaFooterLinkList
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAUnorderedListTag subclass: #MDLMenu
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAUnorderedListTag subclass: #MDLMiniFooterLinkList
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAFormInputTag subclass: #MDLTextFieldInput
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARangeInputTag subclass: #MDLSlider
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATextAreaTag subclass: #MDLTextArea
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAButtonTag subclass: #MDLButton
+	instanceVariableNames: 'tag'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAButtonTag subclass: #MDLMegaFooterSocialButton
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAButtonTag subclass: #MDLMiniFooterSocialButton
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAButtonTag subclass: #MDLSnackbarAction
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WACheckboxTag subclass: #MDLCheckbox
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WACheckboxTag subclass: #MDLIconToggle
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WACheckboxTag subclass: #MDLMegaFooterHeadingCheckBox
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WACheckboxTag subclass: #MDLSwitch
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WARadioButtonTag subclass: #MDLRadioButton
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAHeadingTag subclass: #MDLCardTitleText
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAHeadingTag subclass: #MDLDialogTitle
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAHeadingTag subclass: #MDLMegaFooterHeading
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAImageTag subclass: #MDLChipImage
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WALabelTag subclass: #MDLCheckboxContainer
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WALabelTag subclass: #MDLIconToggleContainer
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WALabelTag subclass: #MDLRadioContainer
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WALabelTag subclass: #MDLSwitchContainer
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WALabelTag subclass: #MDLTextFieldLabel
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATableDataTag subclass: #MDLTableCell
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATableHeadingTag subclass: #MDLTableHeadingCell
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WATableTag subclass: #MDLTable
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PackageManifest subclass: #ManifestMaterialDesignLiteComponents
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Trait subclass: #TMDLButton
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!JSObject methodsFor!
+
+js	^ self! !
+!JSObject categoriesFor: #js!*Material/Design/Lite/Components!public! !
+
+!String methodsFor!
+
+js	^ JSStream on: self! !
+!String categoriesFor: #js!*Material/Design/Lite/Components!public! !
+
+!Time methodsFor!
+
+forHtmlTextArea	^ String streamContents: [ :s | self print24: true showSeconds: false on: s ]! !
+!Time categoriesFor: #forHtmlTextArea!*Material/Design/Lite/Components!public! !
+
+!WABrush methodsFor!
+
+canvas	^ canvas! !
+!WABrush categoriesFor: #canvas!*Material/Design/Lite/Components!public! !
+
+!WAHtmlCanvas methodsFor!
+
+mdlAnchorButton	^ self brush: MDLAnchorButton new !
+
+mdlBadge	^ self brush: MDLBadge new !
+
+mdlBadge: aString	^ self mdlBadge		with: aString;		yourself!
+
+mdlButton	^ self brush: MDLButton new !
+
+mdlButton: aSubComponent	^ self mdlButton		with: aSubComponent;		yourself!
+
+mdlCard	^ self brush: MDLCardTag new !
+
+mdlCard: aBlock	^ self mdlCard		with: aBlock;		yourself!
+
+mdlCardActions	^ self brush: MDLCardActions new !
+
+mdlCardActions: aBlock	^ self mdlCardActions		with: aBlock;		yourself!
+
+mdlCardMedia	^ self brush: MDLCardMedia new !
+
+mdlCardMedia: aBlock	^ self mdlCardMedia		with: aBlock;		yourself!
+
+mdlCardMenu	^ self brush: MDLCardMenu new !
+
+mdlCardMenu: aBlock	^ self mdlCardMenu		with: aBlock;		yourself!
+
+mdlCardSubtitleText	^ self brush: MDLCardSubtitleText new!
+
+mdlCardSubtitleText: text	^ self mdlCardSubtitleText		with: text;		yourself!
+
+mdlCardTextContainer	^ self brush: MDLCardTextContainer new !
+
+mdlCardTextContainer: aBlock	^ self mdlCardTextContainer		with: aBlock;		yourself!
+
+mdlCardTitleContainer	^ self brush: MDLCardTitleContainer new!
+
+mdlCardTitleContainer: aBlock	^ self mdlCardTitleContainer		with: aBlock;		yourself!
+
+mdlCardTitleText	^ self brush: MDLCardTitleText new!
+
+mdlCardTitleText: text	^ self mdlCardTitleText		with: text;		yourself!
+
+mdlCardTitleText: text level: lvl	^ self mdlCardTitleText		level: lvl;		with: text!
+
+mdlCell	^ self brush: MDLCell new !
+
+mdlCell: aBlock	^ self mdlCell		with: aBlock;		yourself!
+
+mdlCell: aBlock desktopSize: size	^ self mdlCell		desktopSize: size;		with: aBlock;		yourself!
+
+mdlCell: aBlock phoneSize: size	^ self mdlCell		phoneSize: size;		with: aBlock;		yourself!
+
+mdlCell: aBlock size: size	^ self mdlCell		size: size;		with: aBlock;		yourself!
+
+mdlCell: aBlock tabletSize: size	^ self mdlCell		tabletSize: size;		with: aBlock;		yourself!
+
+mdlCellDesktop:  dsize tablet: tsize phone: psize	^ self mdlCell		desktopSize: dsize;		tabletSize: tsize;		phoneSize: psize;		yourself!
+
+mdlCellDesktop:  dsize tablet: tsize phone: psize with: aBlock	^ self mdlCell		desktopSize: dsize;		tabletSize: tsize;		phoneSize: psize;		with: aBlock;		yourself!
+
+mdlCheckbox	^ self brush: MDLCheckbox new !
+
+mdlCheckboxContainer	^ self brush: MDLCheckboxContainer  new !
+
+mdlCheckboxLabel	^ self brush: MDLCheckboxLabel new!
+
+mdlCheckboxLabel: aText	^ self mdlCheckboxLabel		with: aText;		yourself!
+
+mdlChip	^ self brush: MDLChipTag new !
+
+mdlChip: aBlock	^ self mdlChip		with: aBlock;		yourself!
+
+mdlChipContact	^ self brush: MDLChipInitial new!
+
+mdlChipContact: aBlock	^ self mdlChipContact		with: aBlock;		yourself!
+
+mdlChipImage	^ self brush: MDLChipImage new!
+
+mdlChipText	^ self brush: MDLChipTextTag new !
+
+mdlChipText: aBlock	^ self mdlChipText		with: aBlock;		yourself!
+
+mdlDialog	^ self brush: MDLDialog new !
+
+mdlDialogActions	^ self brush: MDLDialogActions new !
+
+mdlDialogActions: aBlock	^ self mdlDialogActions		with: aBlock;		yourself!
+
+mdlDialogContent	^ self brush: MDLDialogContent new !
+
+mdlDialogContent: aBlock	^ self mdlDialogContent		with: aBlock;		yourself!
+
+mdlDialogDisagreeButton	^ self brush: (MDLButton new class: 'close')!
+
+mdlDialogTitle	^ self brush: MDLDialogTitle new !
+
+mdlDialogTitle: aBlock	^ self mdlDialogTitle		with: aBlock;		yourself!
+
+mdlDiv	^ self brush: MDLDivTag new !
+
+mdlDiv: aBlock	^ self mdlDiv		with: aBlock;		yourself!
+
+mdlFooter	^ self brush: MDLMegaFooter new !
+
+mdlFooter: aBlock	^ self mdlFooter		with: aBlock;		yourself!
+
+mdlFooterBottomSection	^ self brush: MDLMegaFooterBottomSection new !
+
+mdlFooterBottomSection: aBlock	^ self mdlFooterBottomSection		with: aBlock;		yourself!
+
+mdlFooterDropdownSection	^ self brush: MDLMegaFooterDropdownSection new !
+
+mdlFooterDropdownSection: aBlock	^ self mdlFooterDropdownSection		with: aBlock;		yourself!
+
+mdlFooterHeading	^ self brush: MDLMegaFooterHeading new !
+
+mdlFooterHeading: aBlock	^ self mdlFooterHeading		with: aBlock;		yourself!
+
+mdlFooterHeadingCheckbox	^ self brush: MDLMegaFooterHeadingCheckBox new !
+
+mdlFooterLeftSection	^ self brush: MDLMegaFooterLeftSection new !
+
+mdlFooterLeftSection: aBlock	^ self mdlFooterLeftSection		with: aBlock;		yourself!
+
+mdlFooterLinkList	^ self brush: MDLMegaFooterLinkList new !
+
+mdlFooterLinkList: aBlock	^ self mdlFooterLinkList		with: aBlock;		yourself!
+
+mdlFooterLogo	^ self mdlLogo!
+
+mdlFooterLogo: aBlock	^ self mdlLogo: aBlock!
+
+mdlFooterMiddleSection	^ self brush: MDLMegaFooterMiddleSection new !
+
+mdlFooterMiddleSection: aBlock	^ self mdlFooterMiddleSection		with: aBlock;		yourself!
+
+mdlFooterRightSection	^ self brush: MDLMegaFooterRightSection new !
+
+mdlFooterRightSection: aBlock	^ self mdlFooterRightSection		with: aBlock;		yourself!
+
+mdlFooterSocialButton	^ self brush: MDLMegaFooterSocialButton new !
+
+mdlFooterSocialButton: aBlock	^ self mdlFooterSocialButton		with: aBlock;		yourself!
+
+mdlFooterTopSection	^ self brush: MDLMegaFooterTopSection new !
+
+mdlFooterTopSection: aBlock	^ self mdlFooterTopSection		with: aBlock;		yourself!
+
+mdlGrid	^ self brush: MDLGrid new !
+
+mdlGrid: aBlock	^ self mdlGrid		with: aBlock;		yourself!
+
+mdlIcon	"Return a MDL glyph icon"	^self brush: MDLIcon new!
+
+mdlIcon: aText	"Defines a MDL glyph icon."	^ self mdlIcon		with: aText;		yourself!
+
+mdlIconBadge	^ self brush: MDLIconBadge new !
+
+mdlIconBadge: aString	^ self mdlIconBadge		with: aString;		yourself!
+
+mdlIconToggle	^ self brush: MDLIconToggle new !
+
+mdlIconToggleContainer	^ self brush: MDLIconToggleContainer new !
+
+mdlIconToggleLabel	^ self mdlIcon		toggle;		yourself!
+
+mdlIconToggleLabel: aText	^ self mdlIconToggleLabel	with: aText;	yourself !
+
+mdlLayout	^ self brush: MDLLayout new !
+
+mdlLayout: aBlock	^ self mdlLayout		with: aBlock;		yourself!
+
+mdlLayoutContent	^ self brush: MDLLayoutContent new !
+
+mdlLayoutContent: aBlock	^ self mdlLayoutContent		with: aBlock;		yourself!
+
+mdlLayoutDrawer	^ self brush: MDLLayoutDrawer new !
+
+mdlLayoutDrawer: aBlock	^ self mdlLayoutDrawer		with: aBlock;		yourself!
+
+mdlLayoutHeader	^ self brush: MDLLayoutHeader new !
+
+mdlLayoutHeader: aBlock	^ self mdlLayoutHeader		with: aBlock;		yourself!
+
+mdlLayoutHeaderRow	^ self brush: MDLLayoutHeaderRow new !
+
+mdlLayoutHeaderRow: aBlock	^ self mdlLayoutHeaderRow		with: aBlock;		yourself!
+
+mdlLayoutIcon	^ self brush: MDLLayoutIcon new !
+
+mdlLayoutIcon: aBlock	^ self mdlLayoutIcon		with: aBlock;		yourself!
+
+mdlLayoutSpacer	^ self brush: MDLLayoutSpacer new !
+
+mdlLayoutSpacer: aBlock	^ self mdlLayoutSpacer		with: aBlock;		yourself!
+
+mdlLayoutTab	^ self brush: MDLLayoutTab new !
+
+mdlLayoutTab: aBlock	^ self mdlLayoutTab		with: aBlock;		yourself!
+
+mdlLayoutTabBar	^ self brush: MDLLayoutTabBar new !
+
+mdlLayoutTabBar: aBlock	^ self mdlLayoutTabBar		with: aBlock;		yourself!
+
+mdlLayoutTabPanel	^ self brush: MDLLayoutTabPanel new !
+
+mdlLayoutTabPanel: aBlock	^ self mdlLayoutTabPanel		with: aBlock;		yourself!
+
+mdlLayoutTitle	^ self brush: MDLLayoutTitle new !
+
+mdlLayoutTitle: aBlock	^ self mdlLayoutTitle		with: aBlock;		yourself!
+
+mdlList	^ self brush: MDLList new!
+
+mdlList: aBlock	^ self mdlList		with: aBlock;		yourself!
+
+mdlListAvatar	"Defines a MDL glyph icon."	^ self mdlIcon listItemAvatar!
+
+mdlListAvatar: aText	"Defines a MDL glyph icon."	^ self mdlListAvatar		with: aText;		yourself!
+
+mdlListIcon	"Defines a MDL glyph icon."	^ self mdlIcon listItemIcon!
+
+mdlListIcon: aText	"Defines a MDL glyph icon."	^ self mdlListIcon		with: aText;		yourself!
+
+mdlListItem	^ self brush: MDLListItem new!
+
+mdlListItem: aBlock	^ self mdlListItem		with: aBlock;		yourself!
+
+mdlListItemSecondaryAction	^ self brush: MDLListItemSecondaryAction new!
+
+mdlListItemSecondaryAction: aBlock	^ self mdlListItemSecondaryAction		with: aBlock;		yourself!
+
+mdlListItemSecondaryInfo	^ self brush: MDLListItemSecondaryInfo new!
+
+mdlListItemSecondaryInfo: aBlock	^ self mdlListItemSecondaryInfo		with: aBlock;		yourself!
+
+mdlListItemSubTitle	^ self brush: MDLListItemSubTitle new!
+
+mdlListItemSubTitle: aBlock	^ self mdlListItemSubTitle		with: aBlock;		yourself!
+
+mdlListItemTextBody	^ self brush: MDLListItemTextBody new!
+
+mdlListItemTextBody: aBlock	^ self mdlListItemTextBody		with: aBlock;		yourself!
+
+mdlListPrimaryContent	^ self brush: MDLListPrimaryContent new!
+
+mdlListPrimaryContent: aBlock	^ self mdlListPrimaryContent		with: aBlock;		yourself!
+
+mdlListSecondaryContent	^ self brush: MDLListSecondaryContent new!
+
+mdlListSecondaryContent: aBlock	^ self mdlListSecondaryContent		with: aBlock;		yourself!
+
+mdlLogo	^ self brush: MDLLogo new !
+
+mdlLogo: aText	^ self mdlLogo		with: aText;		yourself!
+
+mdlMenu	^ self brush: MDLMenu new !
+
+mdlMenuItem	^ self brush: MDLMenuItem new!
+
+mdlMenuItem: aBlock	^ self mdlMenuItem		with: aBlock;		yourself!
+
+mdlMiniFooter	^ self brush: MDLMiniFooter new !
+
+mdlMiniFooter: aBlock	^ self mdlMiniFooter		with: aBlock;		yourself!
+
+mdlMiniFooterLeftSection	^ self brush: MDLMiniFooterLeftSection new !
+
+mdlMiniFooterLeftSection: aBlock	^ self mdlMiniFooterLeftSection		with: aBlock;		yourself!
+
+mdlMiniFooterLinkList	^ self brush: MDLMiniFooterLinkList new !
+
+mdlMiniFooterLinkList: aBlock	^ self mdlMiniFooterLinkList		with: aBlock;		yourself!
+
+mdlMiniFooterRightSection	^ self brush: MDLMiniFooterRightSection new !
+
+mdlMiniFooterRightSection: aBlock	^ self mdlMiniFooterRightSection		with: aBlock;		yourself!
+
+mdlMiniFooterSocialButton	^ self brush: MDLMiniFooterSocialButton new !
+
+mdlMiniFooterSocialButton: aBlock	^ self mdlMiniFooterSocialButton		with: aBlock;		yourself!
+
+mdlNavigation	^ self brush: MDLNavigation new !
+
+mdlNavigation: aBlock	^ self mdlNavigation		with: aBlock;		yourself!
+
+mdlNavigationLink	^ self brush: MDLNavigationLink new !
+
+mdlNavigationLink: aBlock	^ self mdlNavigationLink		with: aBlock;		yourself!
+
+mdlProgressBar	^ self brush: MDLProgressBar new !
+
+mdlRadioButton	^ self brush: MDLRadioButton  new !
+
+mdlRadioContainer	^ self brush: MDLRadioContainer  new !
+
+mdlRadioLabel: text	^ (self brush: MDLRadioLabel new)		with: text;		yourself!
+
+mdlSlider	^ self brush: MDLSlider new!
+
+mdlSliderContainer	^ self brush: MDLSliderContainer new!
+
+mdlSliderContainer: aBlock	^ self mdlSliderContainer		with: aBlock;		yourself!
+
+mdlSnackbar	^ self mdlSnackbarWithId: self nextId!
+
+mdlSnackbarButtonFor: aMDLSnackBar	| button |	button := MDLButton new.	self brush: button.	button onClick: aMDLSnackBar getJsShowingSnackbar.	^ button!
+
+mdlSnackbarWithId: id	| snackbar |	snackbar := MDLSnackbar new		id: id;		yourself.			self brush: snackbar.		snackbar		with: [ 			self brush: MDLSnackbarText new.			self brush: MDLSnackbarAction new ].			^ snackbar!
+
+mdlSpinner	^ self brush: MDLSpinner new !
+
+mdlSwitch	^ self brush: MDLSwitch new !
+
+mdlSwitchContainer	^ self brush: MDLSwitchContainer new !
+
+mdlSwitchLabel	^ self brush: MDLSwitchLabel new !
+
+mdlSwitchLabel: aBlock	^ self mdlSwitchLabel		with: aBlock;		yourself!
+
+mdlTab	^ self brush: MDLTabsTab new !
+
+mdlTab: aBlock	^ self mdlTab		with: aBlock;		yourself!
+
+mdlTabBar	^ self brush: MDLTabsTabBar new !
+
+mdlTabBar: aBlock	^ self mdlTabBar		with: aBlock;		yourself!
+
+mdlTable	^ self brush: MDLTable new !
+
+mdlTable: aBlock	^ self mdlTable		with: aBlock;		yourself!
+
+mdlTableCell	^ self brush: MDLTableCell new !
+
+mdlTableCell: aBlock	^ self mdlTableCell		with: aBlock;		yourself!
+
+mdlTableHeading	^ self brush: MDLTableHeadingCell new !
+
+mdlTableHeading: aBlock	^ self mdlTableHeading		with: aBlock;		yourself!
+
+mdlTabs	^ self brush: MDLTabsContainer new !
+
+mdlTabs: aBlock	^ self mdlTabs		with: aBlock;		yourself!
+
+mdlTabsPanel	^ self brush: MDLTabsPanel new !
+
+mdlTabsPanel: aBlock	^ self mdlTabsPanel		with: aBlock;		yourself!
+
+mdlTextArea	^ self brush: MDLTextArea new!
+
+mdlTextArea: aBlock	^ self mdlTextArea with: aBlock!
+
+mdlTextFieldContainer	^ self brush: MDLTextFieldContainer new !
+
+mdlTextFieldContainer: aBlock	^ self mdlTextFieldContainer		with: aBlock;		yourself!
+
+mdlTextFieldError: text	^ (self brush: MDLTextFieldError new )		with: text;		yourself!
+
+mdlTextFieldExpandableHolder	^ self brush: MDLTextFieldExpandableHolder new !
+
+mdlTextFieldExpandableHolder: aBlock	^ (self brush: MDLTextFieldExpandableHolder new )		with: aBlock;		yourself!
+
+mdlTextFieldInput	^ self brush: MDLTextFieldInput new!
+
+mdlTextFieldLabel	^ self brush: MDLTextFieldLabel new!
+
+mdlTextFieldLabel: text	^ self mdlTextFieldLabel		with: text;		yourself!
+
+mdlTooltip	^ self brush: MDLTooltip new! !
+!WAHtmlCanvas categoriesFor: #mdlAnchorButton!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlBadge!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlBadge:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlButton!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlButton:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCard!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCard:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCardActions!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCardActions:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCardMedia!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCardMedia:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCardMenu!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCardMenu:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCardSubtitleText!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCardSubtitleText:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCardTextContainer!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCardTextContainer:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCardTitleContainer!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCardTitleContainer:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCardTitleText!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCardTitleText:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCardTitleText:level:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCell!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCell:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCell:desktopSize:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCell:phoneSize:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCell:size:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCell:tabletSize:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCellDesktop:tablet:phone:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCellDesktop:tablet:phone:with:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCheckbox!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCheckboxContainer!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCheckboxLabel!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlCheckboxLabel:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlChip!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlChip:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlChipContact!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlChipContact:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlChipImage!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlChipText!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlChipText:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlDialog!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlDialogActions!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlDialogActions:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlDialogContent!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlDialogContent:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlDialogDisagreeButton!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlDialogTitle!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlDialogTitle:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlDiv!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlDiv:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooter!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooter:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterBottomSection!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterBottomSection:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterDropdownSection!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterDropdownSection:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterHeading!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterHeading:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterHeadingCheckbox!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterLeftSection!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterLeftSection:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterLinkList!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterLinkList:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterLogo!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterLogo:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterMiddleSection!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterMiddleSection:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterRightSection!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterRightSection:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterSocialButton!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterSocialButton:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterTopSection!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlFooterTopSection:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlGrid!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlGrid:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlIcon!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlIcon:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlIconBadge!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlIconBadge:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlIconToggle!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlIconToggleContainer!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlIconToggleLabel!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlIconToggleLabel:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayout!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayout:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutContent!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutContent:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutDrawer!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutDrawer:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutHeader!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutHeader:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutHeaderRow!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutHeaderRow:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutIcon!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutIcon:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutSpacer!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutSpacer:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutTab!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutTab:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutTabBar!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutTabBar:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutTabPanel!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutTabPanel:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutTitle!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLayoutTitle:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlList!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlList:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlListAvatar!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlListAvatar:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlListIcon!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlListIcon:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlListItem!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlListItem:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlListItemSecondaryAction!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlListItemSecondaryAction:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlListItemSecondaryInfo!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlListItemSecondaryInfo:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlListItemSubTitle!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlListItemSubTitle:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlListItemTextBody!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlListItemTextBody:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlListPrimaryContent!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlListPrimaryContent:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlListSecondaryContent!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlListSecondaryContent:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLogo!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlLogo:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlMenu!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlMenuItem!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlMenuItem:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlMiniFooter!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlMiniFooter:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlMiniFooterLeftSection!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlMiniFooterLeftSection:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlMiniFooterLinkList!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlMiniFooterLinkList:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlMiniFooterRightSection!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlMiniFooterRightSection:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlMiniFooterSocialButton!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlMiniFooterSocialButton:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlNavigation!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlNavigation:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlNavigationLink!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlNavigationLink:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlProgressBar!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlRadioButton!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlRadioContainer!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlRadioLabel:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlSlider!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlSliderContainer!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlSliderContainer:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlSnackbar!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlSnackbarButtonFor:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlSnackbarWithId:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlSpinner!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlSwitch!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlSwitchContainer!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlSwitchLabel!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlSwitchLabel:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTab!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTab:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTabBar!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTabBar:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTable!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTable:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTableCell!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTableCell:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTableHeading!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTableHeading:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTabs!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTabs:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTabsPanel!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTabsPanel:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTextArea!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTextArea:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTextFieldContainer!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTextFieldContainer:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTextFieldError:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTextFieldExpandableHolder!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTextFieldExpandableHolder:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTextFieldInput!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTextFieldLabel!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTextFieldLabel:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlTooltip!*Material/Design/Lite/Components!public! !
+
+!WARadioGroup methodsFor!
+
+mdlRadioButton	^ canvas mdlRadioButton group: self! !
+!WARadioGroup categoriesFor: #mdlRadioButton!*Material/Design/Lite/Components!public! !
+
+!WATableHeadingTag methodsFor!
+
+sortedAscending	self class: 'mdl-data-table__header--sorted-ascending'!
+
+sortedDescending	self class: 'mdl-data-table__header--sorted-descending'! !
+!WATableHeadingTag categoriesFor: #sortedAscending!*Material/Design/Lite/Components!public! !
+!WATableHeadingTag categoriesFor: #sortedDescending!*Material/Design/Lite/Components!public! !
+
+!WATagBrush methodsFor!
+
+beCell	self class:'mdl-cell'!
+
+beCell: aSize	self class:'mdl-cell mdl-cell--', aSize asString, '-col'!
+
+beCell: aSize phoneSize: phoneSize 	self class:'mdl-cell mdl-cell--', aSize asString, '-col mdl-cell--', phoneSize asString, '-col-phone' !
+
+beCell: aSize phoneSize: phoneSize tabletSize: tabletSize	self class:'mdl-cell mdl-cell--', aSize asString, '-col mdl-cell--', phoneSize asString, '-col-phone mdl-cell--', tabletSize asString, '-col-tablet' !
+
+beCell: aSize tabletSize: tabletSize	self class:'mdl-cell mdl-cell--', aSize asString, '-col mdl-cell--', tabletSize asString, '-col-tablet' !
+
+beChipDecoration	self class: #'mdl-chip__contact'.	self script: ((self canvas jQuery this parent: '.mdl-chip') addClass: #'mdl-chip--contact')!
+
+beGrid	self class: 'mdl-grid'!
+
+mdlBackgroundColorAccent	self class: 'mdl-color--accent'!
+
+mdlBackgroundColorPrimary	self class: 'mdl-color--primary'!
+
+mdlBackgroundColorPrimaryDark	self class: 'mdl-color--primary-dark'!
+
+mdlTextColorAccent	self class: 'mdl-color-text--accent'!
+
+mdlTextColorPrimary	self class: 'mdl-color-text--primary'!
+
+mdlTextColorPrimaryDark	self class: 'mdl-color-text--primary-dark'!
+
+mdlTypographyBody1	self class: 'mdl-typography--body-1'!
+
+mdlTypographyBody1ColorContrast	self class: 'mdl-typography--body-1-color-contrast'!
+
+mdlTypographyBody1ForcePreferredFont	self class: 'mdl-typography--body-1-force-preferred-font'!
+
+mdlTypographyBody1ForcePreferredFontColorContrast	self class: 'mdl-typography--body-1-force-preferred-font-color-contrast'!
+
+mdlTypographyBody2	self class: 'mdl-typography--body-2'!
+
+mdlTypographyBody2ColorContrast	self class: 'mdl-typography--body-2-color-contrast'!
+
+mdlTypographyBody2ForcePreferredFont	self class: 'mdl-typography--body-2-force-preferred-font'!
+
+mdlTypographyBody2ForcePreferredFontColorContrast	self class: 'mdl-typography--body-2-force-preferred-font-color-contrast'!
+
+mdlTypographyButton	self class: 'mdl-typography--button'!
+
+mdlTypographyButtonColorContrast	self class: 'mdl-typography--button-color-contrast'!
+
+mdlTypographyCaption	self class: 'mdl-typography--caption'!
+
+mdlTypographyCaptionColorContrast	self class: 'mdl-typography--caption-color-contrast'!
+
+mdlTypographyCaptionForcePreferredFont	self class: 'mdl-typography--caption-force-preferred-font'!
+
+mdlTypographyCaptionForcePreferredFontColorContrast	self class: 'mdl-typography--caption-force-preferred-font-color-contrast'!
+
+mdlTypographyDisplay1	self class: 'mdl-typography--display-1'!
+
+mdlTypographyDisplay1ColorContrast	self class: 'mdl-typography--display-1-color-contrast'!
+
+mdlTypographyDisplay2	self class: 'mdl-typography--display-2'!
+
+mdlTypographyDisplay2ColorContrast	self class: 'mdl-typography--display-2-color-contrast'!
+
+mdlTypographyDisplay3	self class: 'mdl-typography--display-3'!
+
+mdlTypographyDisplay3ColorContrast	self class: 'mdl-typography--display-3-color-contrast'!
+
+mdlTypographyDisplay4	self class: 'mdl-typography--display-4'!
+
+mdlTypographyDisplay4ColorContrast	self class: 'mdl-typography--display-4-color-contrast'!
+
+mdlTypographyFontBlack	self class: 'mdl-typography--font-black'!
+
+mdlTypographyFontBold	self class: 'mdl-typography--font-bold'!
+
+mdlTypographyFontLight	self class: 'mdl-typography--font-light'!
+
+mdlTypographyFontMedium	self class: 'mdl-typography--font-medium'!
+
+mdlTypographyFontRegular	self class: 'mdl-typography--font-regular'!
+
+mdlTypographyFontThin	self class: 'mdl-typography--font-thin'!
+
+mdlTypographyHeadline	self class: 'mdl-typography--headline'!
+
+mdlTypographyHeadlineColorContrast	self class: 'mdl-typography--headline-color-contrast'!
+
+mdlTypographyMenu	self class: 'mdl-typography--menu'!
+
+mdlTypographyMenuColorContrast	self class: 'mdl-typography--menu-color-contrast'!
+
+mdlTypographySubhead	self class: 'mdl-typography--subhead'!
+
+mdlTypographySubheadColorContrast	self class: 'mdl-typography--subhead-color-contrast'!
+
+mdlTypographyTextCapitalize	self class: 'mdl-typography--text-capitalize'!
+
+mdlTypographyTextCenter	self class: 'mdl-typography--text-center'!
+
+mdlTypographyTextJustify	self class: 'mdl-typography--text-justify'!
+
+mdlTypographyTextLeft	self class: 'mdl-typography--text-left'!
+
+mdlTypographyTextLowercase	self class: 'mdl-typography--text-lowercase'!
+
+mdlTypographyTextNowrap	self class: 'mdl-typography--text-nowrap'!
+
+mdlTypographyTextRight	self class: 'mdl-typography--text-right'!
+
+mdlTypographyTextUppercase	self class: 'mdl-typography--text-uppercase'!
+
+mdlTypographyTitle	self class: 'mdl-typography--title'!
+
+mdlTypographyTitleColorContrast	self class: 'mdl-typography--title-color-contrast'!
+
+onChange: aScript if: aCondition	aCondition value ifTrue: [ self onChange: aScript ]!
+
+onClick: aScript if: aCondition	aCondition value		ifTrue: [ self onClick: aScript value ]!
+
+openDialogWithId: anId	"Use me to allow this component to show a modal when we click on it. I should take as parameter the open id of the modal. Check the modal examples for more informations."	self attributeAt: 'data-opendialog' put: anId!
+
+openDialogWithId: anId if: aBoolean	"Use me to allow this component to show a modal when we click on it. I should take as parameter the open id of the modal. Check the modal examples for more informations."	aBoolean		ifTrue: [ self attributeAt: 'data-opendialog' put: anId ]!
+
+shadow: aNumber	"aNumber must be between 2 and 24"	self class: 'mdl-shadow--' , aNumber asString , 'dp'! !
+!WATagBrush categoriesFor: #beCell!*Material/Design/Lite/Components!public! !
+!WATagBrush categoriesFor: #beCell:!*Material/Design/Lite/Components!public! !
+!WATagBrush categoriesFor: #beCell:phoneSize:!*Material/Design/Lite/Components!public! !
+!WATagBrush categoriesFor: #beCell:phoneSize:tabletSize:!*Material/Design/Lite/Components!public! !
+!WATagBrush categoriesFor: #beCell:tabletSize:!*Material/Design/Lite/Components!public! !
+!WATagBrush categoriesFor: #beChipDecoration!*Material/Design/Lite/Components!public! !
+!WATagBrush categoriesFor: #beGrid!*Material/Design/Lite/Components!public! !
+!WATagBrush categoriesFor: #mdlBackgroundColorAccent!*Material/Design/Lite/Components/Color!public! !
+!WATagBrush categoriesFor: #mdlBackgroundColorPrimary!*Material/Design/Lite/Components/Color!public! !
+!WATagBrush categoriesFor: #mdlBackgroundColorPrimaryDark!*Material/Design/Lite/Components/Color!public! !
+!WATagBrush categoriesFor: #mdlTextColorAccent!*Material/Design/Lite/Components/Color!public! !
+!WATagBrush categoriesFor: #mdlTextColorPrimary!*Material/Design/Lite/Components/Color!public! !
+!WATagBrush categoriesFor: #mdlTextColorPrimaryDark!*Material/Design/Lite/Components/Color!public! !
+!WATagBrush categoriesFor: #mdlTypographyBody1!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyBody1ColorContrast!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyBody1ForcePreferredFont!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyBody1ForcePreferredFontColorContrast!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyBody2!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyBody2ColorContrast!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyBody2ForcePreferredFont!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyBody2ForcePreferredFontColorContrast!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyButton!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyButtonColorContrast!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyCaption!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyCaptionColorContrast!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyCaptionForcePreferredFont!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyCaptionForcePreferredFontColorContrast!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyDisplay1!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyDisplay1ColorContrast!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyDisplay2!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyDisplay2ColorContrast!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyDisplay3!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyDisplay3ColorContrast!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyDisplay4!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyDisplay4ColorContrast!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyFontBlack!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyFontBold!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyFontLight!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyFontMedium!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyFontRegular!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyFontThin!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyHeadline!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyHeadlineColorContrast!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyMenu!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyMenuColorContrast!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographySubhead!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographySubheadColorContrast!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyTextCapitalize!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyTextCenter!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyTextJustify!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyTextLeft!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyTextLowercase!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyTextNowrap!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyTextRight!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyTextUppercase!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyTitle!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #mdlTypographyTitleColorContrast!*Material/Design/Lite/Components/Typography!public! !
+!WATagBrush categoriesFor: #onChange:if:!*Material/Design/Lite/Components!public! !
+!WATagBrush categoriesFor: #onClick:if:!*Material/Design/Lite/Components!public! !
+!WATagBrush categoriesFor: #openDialogWithId:!*Material/Design/Lite/Components!public! !
+!WATagBrush categoriesFor: #openDialogWithId:if:!*Material/Design/Lite/Components!public! !
+!WATagBrush categoriesFor: #shadow:!*Material/Design/Lite/Components!public! !
+
+"End of package definition"!
+

@@ -1,0 +1,385 @@
+﻿| package |
+package := Package name: 'Material-Design-Lite-Demo'.
+package paxVersion: 1;
+	basicComment: 'Material Design Lite for Seaside
+Created by DuneST
+https://github.com/DuneSt/MaterialDesignLite
+
+Dolphin Smalltalk port created 26th May 2019
+https://github.com/rko281/MaterialDesignLite'.
+
+
+package classNames
+	add: #ManifestMaterialDesignLiteDemo;
+	add: #MDLAnchorButtonsScreen;
+	add: #MDLBadgesScreen;
+	add: #MDLButtonsScreen;
+	add: #MDLCalendarScreen;
+	add: #MDLCardsScreen;
+	add: #MDLCardWidgetScreen;
+	add: #MDLChipsScreen;
+	add: #MDLComponentDemo;
+	add: #MDLComponentsDemoPage;
+	add: #MDLDemo;
+	add: #MDLDemoAboutPage;
+	add: #MDLDemoComponent;
+	add: #MDLDemoFooter;
+	add: #MDLDemoHeader;
+	add: #MDLDemoInstallationPage;
+	add: #MDLDemoLibrary;
+	add: #MDLDemoPage;
+	add: #MDLDemoPageWithList;
+	add: #MDLDemoScreen;
+	add: #MDLDemoSession;
+	add: #MDLDialogsScreen;
+	add: #MDLElevationScreen;
+	add: #MDLExampleComponentWithRightPanel;
+	add: #MDLExampleComponentWithRightPanelFolded;
+	add: #MDLExampleRightPanel1;
+	add: #MDLExampleRightPanel2;
+	add: #MDLExampleRootDialogRoot;
+	add: #MDLExampleRootDialogUser;
+	add: #MDLExtensionsDemo;
+	add: #MDLExtensionsDemoPage;
+	add: #MDLLayoutScreen;
+	add: #MDLLeftPanelScreen;
+	add: #MDLListsScreen;
+	add: #MDLLoadingScreen;
+	add: #MDLMenuButtonScreen;
+	add: #MDLMenusScreen;
+	add: #MDLNestedListIconExampleComponent;
+	add: #MDLNestedListScreen;
+	add: #MDLPaginationComponentScreen;
+	add: #MDLPollScreen;
+	add: #MDLProgressBarScreen;
+	add: #MDLRightTabsPanelScreen;
+	add: #MDLRootDialogScreen;
+	add: #MDLSelectScreen;
+	add: #MDLSlidersScreen;
+	add: #MDLSnackbarScreen;
+	add: #MDLSortedTableScreen;
+	add: #MDLTablesScreen;
+	add: #MDLTabScreen;
+	add: #MDLTextFieldsScreen;
+	add: #MDLTogglesScreen;
+	add: #MDLTooltipsScreen;
+	add: #MDLTypographyScreen;
+	add: #MDLWidgetDemo;
+	add: #MDLWidgetsDemoPage;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin Legacy Date & Time'
+	'..\Seaside\JQuery\JQuery-Core'
+	'Material-Design-Colors'
+	'Material-Design-Lite-Components'
+	'Material-Design-Lite-Core'
+	'Material-Design-Lite-Extensions'
+	'Material-Design-Lite-Utils'
+	'Material-Design-Lite-Widgets'
+	'..\Portishead\Portishead-Core'
+	'..\Portishead\Portishead-Pragmas'
+	'..\Seaside\Seaside\Seaside-Component'
+	'..\Seaside\Seaside\Seaside-Core'
+	'..\Seaside\Seaside\Seaside-Session'
+	'..\Seaside\Seaside\Seaside-Tools-Core').
+
+package!
+
+"Class Definitions"!
+
+WAFileLibrary subclass: #MDLDemoLibrary
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLDemoComponent
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLExampleComponentWithRightPanel
+	instanceVariableNames: 'toolbar rightPanel'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLExampleRightPanel1
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLExampleRightPanel2
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLExampleRootDialogRoot
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLExampleRootDialogUser
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLNestedListIconExampleComponent
+	instanceVariableNames: 'isRepresentingClass'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDemoComponent subclass: #MDLDemo
+	instanceVariableNames: 'header footer componentToDisplay componentInstances'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDemoComponent subclass: #MDLDemoFooter
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDemoComponent subclass: #MDLDemoHeader
+	instanceVariableNames: 'activeTab'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDemoComponent subclass: #MDLDemoPage
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDemoPage subclass: #MDLDemoAboutPage
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDemoPage subclass: #MDLDemoInstallationPage
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDemoPage subclass: #MDLDemoPageWithList
+	instanceVariableNames: 'list selectedScreen'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDemoPageWithList subclass: #MDLComponentsDemoPage
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDemoPageWithList subclass: #MDLExtensionsDemoPage
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDemoPageWithList subclass: #MDLWidgetsDemoPage
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLExampleComponentWithRightPanel subclass: #MDLExampleComponentWithRightPanelFolded
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLScreen subclass: #MDLDemoScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDemoScreen subclass: #MDLComponentDemo
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDemoScreen subclass: #MDLExtensionsDemo
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDemoScreen subclass: #MDLWidgetDemo
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLAnchorButtonsScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLBadgesScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLButtonsScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLCardsScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLChipsScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLDialogsScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLElevationScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLLayoutScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLListsScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLLoadingScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLMenusScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLSlidersScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLSnackbarScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLTablesScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLTextFieldsScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLTogglesScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLTooltipsScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLTypographyScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLExtensionsDemo subclass: #MDLLeftPanelScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLExtensionsDemo subclass: #MDLPaginationComponentScreen
+	instanceVariableNames: 'paginationWidget paginationWidget2'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLExtensionsDemo subclass: #MDLRightTabsPanelScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLExtensionsDemo subclass: #MDLRootDialogScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidgetDemo subclass: #MDLCalendarScreen
+	instanceVariableNames: 'selectedDay'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidgetDemo subclass: #MDLCardWidgetScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidgetDemo subclass: #MDLMenuButtonScreen
+	instanceVariableNames: 'selectedUser'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidgetDemo subclass: #MDLNestedListScreen
+	instanceVariableNames: 'selectedElement'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidgetDemo subclass: #MDLPollScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidgetDemo subclass: #MDLProgressBarScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidgetDemo subclass: #MDLSelectScreen
+	instanceVariableNames: 'selectedEntity'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidgetDemo subclass: #MDLSortedTableScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidgetDemo subclass: #MDLTabScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WASession subclass: #MDLDemoSession
+	instanceVariableNames: 'rootComponent'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PackageManifest subclass: #ManifestMaterialDesignLiteDemo
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+"End of package definition"!
+

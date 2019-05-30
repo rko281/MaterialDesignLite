@@ -1,0 +1,160 @@
+﻿| package |
+package := Package name: 'Material-Design-Lite-Extensions'.
+package paxVersion: 1;
+	basicComment: 'Material Design Lite for Seaside
+Created by DuneST
+https://github.com/DuneSt/MaterialDesignLite
+
+Dolphin Smalltalk port created 26th May 2019
+https://github.com/rko281/MaterialDesignLite'.
+
+
+package classNames
+	add: #ManifestMaterialDesignLiteExtensions;
+	add: #MDLAbstractPanelResizer;
+	add: #MDLFoldButton;
+	add: #MDLLeftPanelResizer;
+	add: #MDLPaginationComponent;
+	add: #MDLPanelSwitcherButton;
+	add: #MDLRightPanelResizer;
+	add: #MDLVerticalToolbar;
+	add: #TRightTabsPanelBrowser;
+	add: #TRootDialogRenderer;
+	add: #TWithRootDialogComponent;
+	yourself.
+
+package methodNames
+	add: #WAHtmlCanvas -> #leftPanel;
+	add: #WAHtmlCanvas -> #leftPanelResizer;
+	add: #WATagBrush -> #onClickOpenAndUpdateRootDialogWith:;
+	add: #WATagBrush -> #onClickUpdateRootDialogWith:;
+	add: #WATagBrush -> #onClickUpdateRootDialogWith:if:;
+	add: 'MDLDialog class' -> #jsInitializeAndOpenRootDialog;
+	add: 'MDLDialog class' -> #jsInitializeRootDialog;
+	add: 'MDLDialog class' -> #jsOpenRootDialog;
+	add: 'MDLDialog class' -> #rootDialogCloseId;
+	add: 'MDLDialog class' -> #rootDialogId;
+	add: 'MDLDialog class' -> #rootDialogOpenId;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'Material-Design-Lite-Components'
+	'Material-Design-Lite-Widgets'
+	'..\Portishead\Portishead-Core'
+	'..\Portishead\Portishead-Traits'
+	'..\Seaside\Seaside\Seaside-Canvas'
+	'..\Seaside\Seaside\Seaside-Component').
+
+package!
+
+"Class Definitions"!
+
+WAComponent subclass: #MDLAbstractPanelResizer
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLFoldButton
+	instanceVariableNames: 'onCompleteScript divId isFolded'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLPanelSwitcherButton
+	instanceVariableNames: 'panelId text actionBlock tooltip onCompleteJs id owner isSelected'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLVerticalToolbar
+	instanceVariableNames: 'buttons'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractPanelResizer subclass: #MDLLeftPanelResizer
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractPanelResizer subclass: #MDLRightPanelResizer
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidget subclass: #MDLPaginationComponent
+	instanceVariableNames: 'currentPage numberOfPages adjacentsPagesToShow updateBlock'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PackageManifest subclass: #ManifestMaterialDesignLiteExtensions
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Trait subclass: #TRightTabsPanelBrowser
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Trait subclass: #TRootDialogRenderer
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Trait subclass: #TWithRootDialogComponent
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!MDLDialog class methodsFor!
+
+jsInitializeAndOpenRootDialog	^ self jsInitializeRootDialog , self jsOpenRootDialog!
+
+jsInitializeRootDialog	^ ('newDialog("' , self rootDialogId , '");setVerticalPositionOf($("#' , self rootDialogId , '"));componentHandler.upgradeDom()') js!
+
+jsOpenRootDialog	^ 'MaterialDesignLite.openRootDialog();' js!
+
+rootDialogCloseId	"I am the id of the root dialog."	^ #'root-dialog__close'!
+
+rootDialogId	"I am the id of the root dialog."	^ #'root-dialog'!
+
+rootDialogOpenId	"I am the id of the root dialog."	^ #'root-dialog__open'! !
+!MDLDialog class categoriesFor: #jsInitializeAndOpenRootDialog!*Material/Design/Lite/Extensions!public! !
+!MDLDialog class categoriesFor: #jsInitializeRootDialog!*Material/Design/Lite/Extensions!public! !
+!MDLDialog class categoriesFor: #jsOpenRootDialog!*Material/Design/Lite/Extensions!public! !
+!MDLDialog class categoriesFor: #rootDialogCloseId!*Material/Design/Lite/Extensions!public! !
+!MDLDialog class categoriesFor: #rootDialogId!*Material/Design/Lite/Extensions!public! !
+!MDLDialog class categoriesFor: #rootDialogOpenId!*Material/Design/Lite/Extensions!public! !
+
+!WAHtmlCanvas methodsFor!
+
+leftPanel	"A left panel for Synectique's tools."	^ self aside		class: #'material-design-left-panel';		shadow: 2;		yourself!
+
+leftPanelResizer	self render: MDLLeftPanelResizer new! !
+!WAHtmlCanvas categoriesFor: #leftPanel!*Material/Design/Lite/Extensions!public! !
+!WAHtmlCanvas categoriesFor: #leftPanelResizer!*Material/Design/Lite/Extensions!public! !
+
+!WATagBrush methodsFor!
+
+onClickOpenAndUpdateRootDialogWith: aBlock	self		openDialogWithId: MDLDialog rootDialogOpenId;		onClickUpdateRootDialogWith: aBlock!
+
+onClickUpdateRootDialogWith: aBlock	self		onClick:			((canvas jQuery id: MDLDialog rootDialogId) load				html: aBlock;				onComplete: MDLDialog jsInitializeRootDialog)!
+
+onClickUpdateRootDialogWith: aBlock if: aBoolean	aBoolean		ifTrue: [ self onClickUpdateRootDialogWith: aBlock ]! !
+!WATagBrush categoriesFor: #onClickOpenAndUpdateRootDialogWith:!*Material/Design/Lite/Extensions!public! !
+!WATagBrush categoriesFor: #onClickUpdateRootDialogWith:!*Material/Design/Lite/Extensions!public! !
+!WATagBrush categoriesFor: #onClickUpdateRootDialogWith:if:!*Material/Design/Lite/Extensions!public! !
+
+"End of package definition"!
+

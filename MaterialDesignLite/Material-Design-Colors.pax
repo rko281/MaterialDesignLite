@@ -1,0 +1,71 @@
+﻿| package |
+package := Package name: 'Material-Design-Colors'.
+package paxVersion: 1;
+	basicComment: 'Material Design Lite for Seaside
+Created by DuneST
+https://github.com/DuneSt/MaterialDesignLite
+
+Dolphin Smalltalk port created 26th May 2019
+https://github.com/rko281/MaterialDesignLite'.
+
+
+package classNames
+	add: #ManifestMaterialDesignColors;
+	add: #MaterialColorDolphinPlatform;
+	add: #MaterialColorPlatform;
+	add: #MDLColor;
+	yourself.
+
+package methodNames
+	add: #Color -> #asRGBA;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Core\Object Arts\Dolphin\MVP\Base\Dolphin MVP Base'
+	'..\Core\Object Arts\Dolphin\MVP\Gdiplus\Gdiplus'
+	'..\Portishead\Portishead-Core').
+
+package!
+
+"Class Definitions"!
+
+Object subclass: #MaterialColorPlatform
+	instanceVariableNames: ''
+	classVariableNames: 'Current'
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+ARGB subclass: #MDLColor
+	instanceVariableNames: 'tint mdlCode'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: 'colors'!
+MaterialColorPlatform subclass: #MaterialColorDolphinPlatform
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PackageManifest subclass: #ManifestMaterialDesignColors
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!Color methodsFor!
+
+asRGBA	^ String		streamContents: [ :s | 			s				nextPutAll: 'rgba(';				print: self red;				nextPut: $,;				print: self green;				nextPut: $,;				print: self blue;				nextPut: $,;				print: (self alpha / 255) ceiling;				nextPut: $) ]! !
+!Color categoriesFor: #asRGBA!*Material/Design/Colors!public! !
+
+"End of package definition"!
+

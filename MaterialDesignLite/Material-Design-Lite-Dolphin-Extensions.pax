@@ -1,0 +1,51 @@
+﻿| package |
+package := Package name: 'Material-Design-Lite-Dolphin-Extensions'.
+package paxVersion: 1;
+	basicComment: 'Material Design Lite for Seaside
+Created by DuneST
+https://github.com/DuneSt/MaterialDesignLite
+
+Dolphin Smalltalk port created 26th May 2019
+https://github.com/rko281/MaterialDesignLite'.
+
+
+package methodNames
+	add: 'MDLCalendar class' -> #new;
+	add: 'MDLSortableTableHeader class' -> #new;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'Material-Design-Lite-Widgets').
+
+package!
+
+"Class Definitions"!
+
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!MDLCalendar class methodsFor!
+
+new
+
+	^super new initialize! !
+!MDLCalendar class categoriesFor: #new!public! !
+
+!MDLSortableTableHeader class methodsFor!
+
+new
+
+	^super new initialize! !
+!MDLSortableTableHeader class categoriesFor: #new!public! !
+
+"End of package definition"!
+

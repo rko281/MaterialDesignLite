@@ -1,0 +1,99 @@
+﻿| package |
+package := Package name: 'Material-Design-Lite-Core'.
+package paxVersion: 1;
+	basicComment: 'Material Design Lite for Seaside
+Created by DuneST
+https://github.com/DuneSt/MaterialDesignLite
+
+Dolphin Smalltalk port created 26th May 2019
+https://github.com/rko281/MaterialDesignLite'.
+
+
+package classNames
+	add: #ManifestMaterialDesignLiteCore;
+	add: #MaterialDesignLite;
+	add: #MDLApplication;
+	add: #MDLScreen;
+	add: #MDLScreenFooter;
+	add: #MDLScreenLayout;
+	add: #MDLTitleHeaderSection;
+	yourself.
+
+package methodNames
+	add: #Object -> #codeOf:;
+	add: #Object -> #isOnGemstone;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Grease\Grease-Core'
+	'..\Seaside\JQuery\JQuery-Core'
+	'Material-Design-Lite-Utils'
+	'Material-Design-Lite-Widgets'
+	'..\Portishead\Portishead-Core'
+	'..\Portishead\Portishead-Pragmas'
+	'..\Seaside\Seaside\Seaside-Component'
+	'..\Seaside\Seaside\Seaside-Core'
+	'..\Seaside\Seaside\Seaside-Tools-Core').
+
+package!
+
+"Class Definitions"!
+
+Object subclass: #MaterialDesignLite
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLApplication
+	instanceVariableNames: 'screens colors'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLAbstractHeaderSection subclass: #MDLTitleHeaderSection
+	instanceVariableNames: 'app tabs activeTab'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WADecoration subclass: #MDLScreenFooter
+	instanceVariableNames: 'footer'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+WADecoration subclass: #MDLScreenLayout
+	instanceVariableNames: 'layout'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PackageManifest subclass: #ManifestMaterialDesignLiteCore
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!Object methodsFor!
+
+codeOf: aSymbol	"I take a method selector I contains and return his source code without the declaration."	^ String streamContents: [ :stream | (self class sourceCodeAt: aSymbol) lines allButFirst do: [ :ea | stream nextPutAll: ea ] separatedBy: [ stream nextPutAll: GRPlatform current newline ] ]!
+
+isOnGemstone	"In Gemstone we load the package Matrial-Design-Lite-Gemstone which includes a MDLGemstone class. We can use this to know if we are on Gemstone."		^ Smalltalk hasClassNamed: #MDLGemstone! !
+!Object categoriesFor: #codeOf:!*Material/Design/Lite/Core!public! !
+!Object categoriesFor: #isOnGemstone!*Material/Design/Lite/Core!public! !
+
+"End of package definition"!
+
