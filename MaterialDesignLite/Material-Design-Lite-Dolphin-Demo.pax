@@ -15,6 +15,7 @@ ShellLibrary default shellOpen: ''http://localhost:8080/MDLDemo/'''.
 
 package methodNames
 	add: #Association -> #ifEmpty:;
+	add: #ChunkReader -> #collect:;
 	add: #String -> #asMenuBitmap;
 	add: 'MDLComponentDemo class' -> #icon;
 	add: 'MDLDemoScreen class' -> #iconImageIndex;
@@ -57,6 +58,14 @@ ifEmpty: aBlock
 
 	^self! !
 !Association categoriesFor: #ifEmpty:!public! !
+
+!ChunkReader methodsFor!
+
+collect: aBlock
+
+	"ClassDescription>>methods gets us here; MDL Demo expects a collection of methods"
+	^context methodDictionary values collect: aBlock! !
+!ChunkReader categoriesFor: #collect:!accessing!public! !
 
 !MDLComponentDemo class methodsFor!
 
