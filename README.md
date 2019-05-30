@@ -1,5 +1,5 @@
 # MaterialDesignLite
-Dolphin Smalltalk port of [DuneSt](https://github.com/DuneSt)'s [Material Design Lite for Seaside](https://github.com/DuneSt/MaterialDesignLite)
+Dolphin Smalltalk port of [Material Design Lite for Seaside](https://github.com/DuneSt/MaterialDesignLite) created by [DuneSt](https://github.com/DuneSt)
 
 ## Getting Started
 * Install [Dolphin Smalltalk 7.1](https://github.com/dolphinsmalltalk/Dolphin)
@@ -19,6 +19,6 @@ GitHubPackageManager
 
 
 ### Manual Installation
-* Follow manual installation instructions for Seaside
 * This repository should be cloned/downloaded to your image directory
+* Follow manual installation instructions for [Seaside for Dolphin 7.1](https://github.com/rko281/Seaside)
 * Install package `MaterialDesignLite` - this will load all required prerequisites and start the Demo
