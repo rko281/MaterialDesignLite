@@ -8,11 +8,9 @@ Dolphin Smalltalk port of [Material Design Lite for Seaside](https://github.com/
 * Download and install [GitHub Package Manager](https://github.com/rko281/GitHub)
 * Evaluate:
 ```
-GitHubPackageManager
-    install: 'rko281/Seaside/Seaside/Seaside-Core';
-    install: 'rko281/Seaside/Seaside/Seaside-Dolphin-Core';
-    install: 'fxgallego/DolphinHttpServer/SeasideHttpServerAdaptor/Seaside Http Server Adaptor';
-    install: 'rko281/MaterialDesignLite'.
+GitHubPackageManager 
+	include: 'fxgallego'; 
+	install: 'rko281/MaterialDesignLite'.
 ```
 * All required packages and prerequisites will be downloaded and installed
 * Once installation is complete the Demo will be started
