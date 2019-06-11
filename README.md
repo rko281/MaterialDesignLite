@@ -8,9 +8,7 @@ Dolphin Smalltalk port of [Material Design Lite for Seaside](https://github.com/
 * Download and install [GitHub Package Manager](https://github.com/rko281/GitHub)
 * Evaluate:
 ```
-GitHubPackageManager 
-	include: 'fxgallego'; 
-	install: 'rko281/MaterialDesignLite'.
+GitHubPackageManager install: 'rko281/MaterialDesignLite'.
 ```
 * All required packages and prerequisites will be downloaded and installed
 * Once installation is complete the Demo will be started
