@@ -6,13 +6,13 @@ MDLWidgetDemo subclass: #MDLProgressBarScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLProgressBarScreen guid: (GUID fromString: '{1d0d0557-e1ea-47a5-ab49-a5555584f1d4}')!
-MDLProgressBarScreen comment: 'I am a screen to show how to use a MDLProgressBarWidget'!
+MDLProgressBarScreen comment: 'Indicate loading and progress states.'!
 !MDLProgressBarScreen categoriesForClass!Material-Design-Lite-Demo-Widgets! !
 !MDLProgressBarScreen methodsFor!
 
 hiddenProgressBar	^ OrderedDictionary with: 'Hidden progress bar' -> #renderHiddenProgressBarOn:!
 
-renderHiddenProgressBarOn: html	| progression progressBar |	progression := 0.	html render: (progressBar := MDLProgressBarWidget progression: [ progression ]) hidden.	html break.	html mdlButton		onClick:			(progressBar showScript: html)				,					(html jQuery ajax						callback: [ [ [ progression < 1 ]								whileTrue: [ progression := progression + (1 / 10).									(Delay forSeconds: 1) wait ].							Transcript show: progression ] fork ]);		with: 'Click to show'!
+renderHiddenProgressBarOn: html	| progression progressBar |	progression := 0.	html render: (progressBar := MDLProgressBarWidget progression: [ progression ]) hidden.	html break.	html mdlButton		onClick:			(progressBar showScript: html)				,					(html jQuery ajax						callback: [ [ [ progression < 1 ]								whileTrue: [ progression := progression + (1 / 10).									(Delay forSeconds: 1) wait ].							Transcript show: progression displayString ] fork ]);		with: 'Click to show'!
 
 renderScreenContentOn: html	self		render: self synchronizedProgressBar on: html;		render: self hiddenProgressBar on: html!
 
@@ -30,12 +30,9 @@ synchronizedProgressBar	^ OrderedDictionary		with: 'Synchronized progress bar'
 
 !MDLProgressBarScreen class methodsFor!
 
-description	^ 'Indicate loading and progress states.'!
-
 icon	^ 'comploadingPng'!
 
 title	^ 'Progress Bar'! !
-!MDLProgressBarScreen class categoriesFor: #description!accessing!public! !
 !MDLProgressBarScreen class categoriesFor: #icon!accessing!public! !
 !MDLProgressBarScreen class categoriesFor: #title!accessing!public! !
 

@@ -1,6 +1,6 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-MDLAbstractBrushTest subclass: #MDLAnchorButtonTest
+SGTAbstractBrushTest subclass: #MDLAnchorButtonTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''

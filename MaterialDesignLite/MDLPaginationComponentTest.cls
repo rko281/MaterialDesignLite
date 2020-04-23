@@ -1,6 +1,6 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-MDLAbstractSeasideTestCase subclass: #MDLPaginationComponentTest
+SGTAbstractSeasideTestCase subclass: #MDLPaginationComponentTest
 	instanceVariableNames: 'component'
 	classVariableNames: ''
 	poolDictionaries: ''

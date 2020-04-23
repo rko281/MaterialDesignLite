@@ -6,7 +6,7 @@ MDLComponentDemo subclass: #MDLTypographyScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLTypographyScreen guid: (GUID fromString: '{319d09a2-0aa1-4283-aed7-4271ad075e01}')!
-MDLTypographyScreen comment: 'I am a demo screen to show how to use Typography elements'!
+MDLTypographyScreen comment: 'Predefined typographies'!
 !MDLTypographyScreen categoriesForClass!Material-Design-Lite-Demo-Components! !
 !MDLTypographyScreen methodsFor!
 
@@ -48,12 +48,9 @@ typographies	^ OrderedDictionary with: 'Typographies' -> #renderTypographiesOn:
 
 !MDLTypographyScreen class methodsFor!
 
-description	^ 'Predefined typographies'!
-
 icon	^ 'compTypoPng'!
 
 title	^ 'Typography'! !
-!MDLTypographyScreen class categoriesFor: #description!accessing!public! !
 !MDLTypographyScreen class categoriesFor: #icon!accessing!public! !
 !MDLTypographyScreen class categoriesFor: #title!accessing!public! !
 

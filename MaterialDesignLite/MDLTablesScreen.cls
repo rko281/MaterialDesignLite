@@ -6,7 +6,7 @@ MDLComponentDemo subclass: #MDLTablesScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLTablesScreen guid: (GUID fromString: '{1c186822-69ca-4b05-a2b5-1145739c2aa0}')!
-MDLTablesScreen comment: 'I''m representing the tables.'!
+MDLTablesScreen comment: 'Organize data.'!
 !MDLTablesScreen categoriesForClass!Material-Design-Lite-Demo-Components! !
 !MDLTablesScreen methodsFor!
 
@@ -21,12 +21,9 @@ renderScreenContentOn: html	self render: self dataTable on: html! !
 
 !MDLTablesScreen class methodsFor!
 
-description	^ 'Organize data.'!
-
 icon	^ 'comptablesPng'!
 
 title	^ 'Tables'! !
-!MDLTablesScreen class categoriesFor: #description!accessing!public! !
 !MDLTablesScreen class categoriesFor: #icon!accessing!public! !
 !MDLTablesScreen class categoriesFor: #title!accessing!public! !
 

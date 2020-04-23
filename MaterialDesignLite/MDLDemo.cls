@@ -38,7 +38,7 @@ initialize	super initialize.	self header: self defaultHeader.	self footer: se
 
 initialRequest: aRequest	| consumer pageName |	super initialRequest: aRequest.	consumer := self requestContext consumer.		"If we are at end, nothing to manage"	consumer atEnd ifTrue: [ ^ self ].		pageName := consumer peek asLowercase. "Do not make URLs case sensitive in that case"		"Try to find a page corresponding"	self header possiblePages		detect: [ :each | each pathName asLowercase = pageName ]		ifFound: [ :class | 			self displayInstanceOf: class.			"If we find a page, we pop the subpart of the path corresponding to the page."			consumer next ]!
 
-renderContentOn: html	html		mdlLayout: [ html render: self header.			html mdlLayoutContent				class: 'mdl-color-text--grey-600';				with: [ html mdlGrid						noSpacing;						with: [ html mdlCell								class: 'mdl-components';								size: 12;								with: [ html render: self componentToDisplay ] ].					html render: self footer ] ]!
+renderContentOn: html	html		mdlLayout: [ html render: self header.			html mdlLayoutContent				class: 'mdl-color-text--grey-600';				with: [ html mdlGrid						noSpacing;						with: [ html mdlCell								class: 'mdl-components';								size: 12;								with: [ html render: self componentToDisplay ] ].					html render: self footer ].			html mdlButton				id: #scrollTop;				fab;				miniFab;				colored;				with: [ html mdlIcon: #arrow_upward ] ]!
 
 style	^ '.mdl-pagination__current{        box-shadow: inset 0px -4px 0px 0px #E91E63 !!important;    }'!
 
@@ -76,11 +76,11 @@ canBeRoot	^ true!
 
 initialize	^ self initializeAs: 'MDLDemo'!
 
-initializeAs: aString	self environment at: #WADevelopmentConfiguration ifPresent: [ :class | WAAdmin applicationDefaults removeParent: class instance ].	^ (WAAdmin register: self asApplicationAt: aString)		preferenceAt: #sessionClass put: MDLDemoSession;		addLibrary: JQDeploymentLibrary;		addLibrary: MDLLibrary;		addLibrary: MDLDemoLibrary;		yourself!
+initializeAs: aString	| app |	self environment at: #WADevelopmentConfiguration ifPresent: [ :class | WAAdmin applicationDefaults removeParent: class instance ].	app := WAAdmin register: self asApplicationAt: aString.	app configuration		at: #maximumAbsoluteAge put: 0;		at: #maximumRelativeAge put: 7 days asSeconds.	app		preferenceAt: #sessionClass put: MDLDemoSession;		addLibrary: JQDeploymentLibrary;		addLibrary: MDLLibrary;		addLibrary: MDLDemoLibrary.	^ app!
 
 menuCommandOn: aBuilder	##(Pragma worldMenu).	(aBuilder item: #'Open demo in default browser')		order: 2;		iconName: #nautilus;		parent: #MaterialDesignLite;		help: 'Open the demo in the default web browser';		action: [ self open ].!
 
-version	^ 'v2.1.4'! !
+version	^ 'v2.2.1'! !
 !MDLDemo class categoriesFor: #canBeRoot!public!testing! !
 !MDLDemo class categoriesFor: #initialize!initialization!public! !
 !MDLDemo class categoriesFor: #initializeAs:!initialization!public! !

@@ -6,7 +6,7 @@ MDLComponentDemo subclass: #MDLTogglesScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLTogglesScreen guid: (GUID fromString: '{5ec227e2-ce98-4abe-9dfd-ba6f6444f9bb}')!
-MDLTogglesScreen comment: 'I''m representing Toggles screen'!
+MDLTogglesScreen comment: 'Choose between states.'!
 !MDLTogglesScreen categoriesForClass!Material-Design-Lite-Demo-Components! !
 !MDLTogglesScreen methodsFor!
 
@@ -57,12 +57,9 @@ switch	^ OrderedDictionary new		add: 'Switch on' -> #renderSwitchOnOn:;		add:
 
 !MDLTogglesScreen class methodsFor!
 
-description	^ 'Choose between states.'!
-
 icon	^ 'comptogglesPng'!
 
 title	^ 'Toggles'! !
-!MDLTogglesScreen class categoriesFor: #description!accessing!public! !
 !MDLTogglesScreen class categoriesFor: #icon!accessing!public! !
 !MDLTogglesScreen class categoriesFor: #title!accessing!public! !
 

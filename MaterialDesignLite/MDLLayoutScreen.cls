@@ -6,7 +6,7 @@ MDLComponentDemo subclass: #MDLLayoutScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLLayoutScreen guid: (GUID fromString: '{35c557ba-1cd3-45ec-a2c7-36b4736b4020}')!
-MDLLayoutScreen comment: 'I''m the screen representing different layoutsSee Navigation, Tabs, Footer and Grid sections for more informations'!
+MDLLayoutScreen comment: 'Building blocks for constructing a page layout.'!
 !MDLLayoutScreen categoriesForClass!Material-Design-Lite-Demo-Components! !
 !MDLLayoutScreen methodsFor!
 
@@ -126,12 +126,9 @@ waterfallHeader	^ OrderedDictionary new		add: 'Waterfall header' -> #renderWat
 
 !MDLLayoutScreen class methodsFor!
 
-description	^ 'Building blocks for constructing a page layout.'!
-
 icon	^ 'complayoutPng'!
 
 title	^ 'Layout'! !
-!MDLLayoutScreen class categoriesFor: #description!accessing!public! !
 !MDLLayoutScreen class categoriesFor: #icon!accessing!public! !
 !MDLLayoutScreen class categoriesFor: #title!accessing!public! !
 

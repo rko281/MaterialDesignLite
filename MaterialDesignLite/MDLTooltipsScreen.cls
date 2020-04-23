@@ -6,7 +6,7 @@ MDLComponentDemo subclass: #MDLTooltipsScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLTooltipsScreen guid: (GUID fromString: '{c4b4e088-f103-4e65-8c4f-40382bb3249b}')!
-MDLTooltipsScreen comment: 'I am representing tooltips screen'!
+MDLTooltipsScreen comment: 'Useful informations on hover.'!
 !MDLTooltipsScreen categoriesForClass!Material-Design-Lite-Demo-Components! !
 !MDLTooltipsScreen methodsFor!
 
@@ -48,12 +48,9 @@ simpleTooltips	^ OrderedDictionary new		add: 'Simple' -> #renderSimpleTooltipO
 
 !MDLTooltipsScreen class methodsFor!
 
-description	^ 'Useful informations on hover.'!
-
 icon	^ 'comptooltipsPng'!
 
 title	^ 'Tooltips'! !
-!MDLTooltipsScreen class categoriesFor: #description!accessing!public! !
 !MDLTooltipsScreen class categoriesFor: #icon!accessing!public! !
 !MDLTooltipsScreen class categoriesFor: #title!accessing!public! !
 

@@ -6,7 +6,7 @@ MDLComponentDemo subclass: #MDLCardsScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLCardsScreen guid: (GUID fromString: '{cfc8fd49-3663-4a39-84f6-f7ec5fbc11d6}')!
-MDLCardsScreen comment: 'I am the screen representing cards.'!
+MDLCardsScreen comment: 'Self-contained pieces of paper with data'!
 !MDLCardsScreen categoriesForClass!Material-Design-Lite-Demo-Components! !
 !MDLCardsScreen methodsFor!
 
@@ -36,12 +36,9 @@ wideCards	^ OrderedDictionary new		add: 'Wide' -> #renderWideCardOn:;		yourse
 
 !MDLCardsScreen class methodsFor!
 
-description	^ 'Self-contained pieces of paper with data'!
-
 icon		^ 'compcardsPng'!
 
 title	^ 'Cards'! !
-!MDLCardsScreen class categoriesFor: #description!accessing!public! !
 !MDLCardsScreen class categoriesFor: #icon!accessing!public! !
 !MDLCardsScreen class categoriesFor: #title!accessing!public! !
 

@@ -6,7 +6,7 @@ MDLComponentDemo subclass: #MDLDialogsScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLDialogsScreen guid: (GUID fromString: '{6f6c40a8-19c9-45cc-b006-9ed830345ab2}')!
-MDLDialogsScreen comment: 'I''m representing dialogs screen'!
+MDLDialogsScreen comment: 'Modal windows for dedicated user input.'!
 !MDLDialogsScreen categoriesForClass!Material-Design-Lite-Demo-Components! !
 !MDLDialogsScreen methodsFor!
 
@@ -27,12 +27,9 @@ simpleDialog	^ OrderedDictionary new		add: 'Simple Dialog' -> #renderSimpleDia
 
 !MDLDialogsScreen class methodsFor!
 
-description	^ 'Modal windows for dedicated user input.'!
-
 icon		^ 'compdialogPng'!
 
 title	^ 'Dialog'! !
-!MDLDialogsScreen class categoriesFor: #description!accessing!public! !
 !MDLDialogsScreen class categoriesFor: #icon!accessing!public! !
 !MDLDialogsScreen class categoriesFor: #title!accessing!public! !
 

@@ -5,8 +5,12 @@ package paxVersion: 1;
 Created by DuneST
 https://github.com/DuneSt/MaterialDesignLite
 
-Dolphin Smalltalk port created 26th May 2019
-https://github.com/rko281/MaterialDesignLite'.
+Dolphin Smalltalk port updated 23rd April 2020
+https://github.com/rko281/MaterialDesignLite
+
+"Launch the Demo"
+(WAHttpServerAdaptor port: 8080) start.
+ShellLibrary default shellOpen: ''http://localhost:8080/MDLDemo/'''.
 
 
 package classNames
@@ -22,9 +26,9 @@ package globalAliases: (Set new
 
 package setPrerequisites: #(
 	'Material-Design-Colors'
-	'Material-Design-Lite-Components-Tests'
 	'Material-Design-Lite-Core'
 	'..\Seaside\Seaside\Seaside-Component'
+	'SeasideGenerationTester'
 	'..\Core\Contributions\Camp Smalltalk\SUnit\SUnit').
 
 package!
@@ -36,7 +40,7 @@ TestCase subclass: #MDLCoreTests
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-MDLAbstractSeasideTestCase subclass: #MDLApplicationTest
+SGTAbstractSeasideTestCase subclass: #MDLApplicationTest
 	instanceVariableNames: 'app'
 	classVariableNames: ''
 	poolDictionaries: ''

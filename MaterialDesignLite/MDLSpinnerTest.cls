@@ -1,13 +1,13 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-MDLAbstractBrushTest subclass: #MDLSpinnerTest
+SGTAbstractBrushTest subclass: #MDLSpinnerTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLSpinnerTest guid: (GUID fromString: '{443649c6-9a3a-4d33-8156-a55f8e930b98}')!
 MDLSpinnerTest comment: ''!
-!MDLSpinnerTest categoriesForClass!Material-Design-Lite-Components-Tests-loading! !
+!MDLSpinnerTest categoriesForClass!Material-Design-Lite-Components-Tests-Loading! !
 !MDLSpinnerTest methodsFor!
 
 testBareBrush	self assert: [ :html | html mdlSpinner ] generates: '<div class="mdl-spinner mdl-js-spinner"></div>'!

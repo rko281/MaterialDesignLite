@@ -6,7 +6,7 @@ MDLComponentDemo subclass: #MDLButtonsScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLButtonsScreen guid: (GUID fromString: '{0fd08089-2655-47cc-b6b2-27dee1d5add2}')!
-MDLButtonsScreen comment: 'I''m the screen representing the buttons.'!
+MDLButtonsScreen comment: 'Variations on Material Design buttons.'!
 !MDLButtonsScreen categoriesForClass!Material-Design-Lite-Demo-Components! !
 !MDLButtonsScreen methodsFor!
 
@@ -105,12 +105,9 @@ renderScreenContentOn: html	self		render: self fabColoredButtons on: html;		r
 
 !MDLButtonsScreen class methodsFor!
 
-description	^ 'Variations on Material Design buttons.'!
-
 icon	^ 'compbuttonsPng'!
 
 title	^ 'Buttons'! !
-!MDLButtonsScreen class categoriesFor: #description!public!sections! !
 !MDLButtonsScreen class categoriesFor: #icon!accessing!public! !
 !MDLButtonsScreen class categoriesFor: #title!accessing!public! !
 

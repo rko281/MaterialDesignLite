@@ -6,7 +6,7 @@ MDLComponentDemo subclass: #MDLBadgesScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLBadgesScreen guid: (GUID fromString: '{d7137e20-7d82-4868-82a6-5afc0683e1ce}')!
-MDLBadgesScreen comment: 'I am the screen representing badges.There are 2 different kinds of badges:  text or icon badges.'!
+MDLBadgesScreen comment: 'Small status descriptors for UI elements.'!
 !MDLBadgesScreen categoriesForClass!Material-Design-Lite-Demo-Components! !
 !MDLBadgesScreen methodsFor!
 
@@ -51,12 +51,9 @@ textBadges	^ OrderedDictionary new		add: 'Number' -> #renderNumberTextBadgeOn:
 
 !MDLBadgesScreen class methodsFor!
 
-description	^ 'Small status descriptors for UI elements.'!
-
 icon	^ 'compbadgesPng'!
 
 title	^ 'Badges'! !
-!MDLBadgesScreen class categoriesFor: #description!accessing!public! !
 !MDLBadgesScreen class categoriesFor: #icon!accessing!public! !
 !MDLBadgesScreen class categoriesFor: #title!accessing!public! !
 

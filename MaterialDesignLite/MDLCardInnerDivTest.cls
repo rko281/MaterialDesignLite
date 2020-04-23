@@ -1,6 +1,6 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-MDLAbstractBrushTest subclass: #MDLCardInnerDivTest
+SGTAbstractBrushTest subclass: #MDLCardInnerDivTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''

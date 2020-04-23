@@ -1,6 +1,6 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-MDLAbstractSeasideTestCase subclass: #MDLTRootDialogRendererTest
+SGTAbstractSeasideTestCase subclass: #MDLTRootDialogRendererTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''

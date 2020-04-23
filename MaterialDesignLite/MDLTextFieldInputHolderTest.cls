@@ -1,6 +1,6 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-MDLAbstractBrushTest subclass: #MDLTextFieldInputHolderTest
+SGTAbstractBrushTest subclass: #MDLTextFieldInputHolderTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''

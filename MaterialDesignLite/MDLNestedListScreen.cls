@@ -6,7 +6,7 @@ MDLWidgetDemo subclass: #MDLNestedListScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLNestedListScreen guid: (GUID fromString: '{1c9bd21b-3c04-4791-8abb-cb50b79b16a2}')!
-MDLNestedListScreen comment: 'I am nested list demonstration panel'!
+MDLNestedListScreen comment: 'A smart list that will dynamically load in Ajax'!
 !MDLNestedListScreen categoriesForClass!Material-Design-Lite-Demo-Widgets! !
 !MDLNestedListScreen methodsFor!
 
@@ -45,12 +45,9 @@ sortedChildrenList	^ OrderedDictionary new		add: 'List with sorted children' -
 
 !MDLNestedListScreen class methodsFor!
 
-description	^ 'A smart list that will dynamically load in Ajax'!
-
 icon	^ 'complistsPng'!
 
 title	^ 'Nested list'! !
-!MDLNestedListScreen class categoriesFor: #description!accessing!public! !
 !MDLNestedListScreen class categoriesFor: #icon!accessing!public! !
 !MDLNestedListScreen class categoriesFor: #title!accessing!public! !
 

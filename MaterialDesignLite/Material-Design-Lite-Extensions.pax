@@ -5,13 +5,18 @@ package paxVersion: 1;
 Created by DuneST
 https://github.com/DuneSt/MaterialDesignLite
 
-Dolphin Smalltalk port created 26th May 2019
-https://github.com/rko281/MaterialDesignLite'.
+Dolphin Smalltalk port updated 23rd April 2020
+https://github.com/rko281/MaterialDesignLite
+
+"Launch the Demo"
+(WAHttpServerAdaptor port: 8080) start.
+ShellLibrary default shellOpen: ''http://localhost:8080/MDLDemo/'''.
 
 
 package classNames
 	add: #ManifestMaterialDesignLiteExtensions;
 	add: #MDLAbstractPanelResizer;
+	add: #MDLAlert;
 	add: #MDLFoldButton;
 	add: #MDLLeftPanelResizer;
 	add: #MDLPaginationComponent;
@@ -26,6 +31,8 @@ package classNames
 package methodNames
 	add: #WAHtmlCanvas -> #leftPanel;
 	add: #WAHtmlCanvas -> #leftPanelResizer;
+	add: #WAHtmlCanvas -> #mdlAlert;
+	add: #WAHtmlCanvas -> #mdlAlert:;
 	add: #WATagBrush -> #onClickOpenAndUpdateRootDialogWith:;
 	add: #WATagBrush -> #onClickUpdateRootDialogWith:;
 	add: #WATagBrush -> #onClickUpdateRootDialogWith:if:;
@@ -56,6 +63,11 @@ package!
 
 "Class Definitions"!
 
+MDLDivTag subclass: #MDLAlert
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
 WAComponent subclass: #MDLAbstractPanelResizer
 	instanceVariableNames: ''
 	classVariableNames: ''
@@ -139,11 +151,17 @@ rootDialogOpenId	"I am the id of the root dialog."	^ #'root-dialog__open'! !
 
 !WAHtmlCanvas methodsFor!
 
-leftPanel	"A left panel for Synectique's tools."	^ self aside		class: #'material-design-left-panel';		shadow: 2;		yourself!
+leftPanel	^ self aside		class: #'material-design-left-panel';		shadow: 2;		yourself!
 
-leftPanelResizer	self render: MDLLeftPanelResizer new! !
+leftPanelResizer	self render: MDLLeftPanelResizer new!
+
+mdlAlert	^ self brush: MDLAlert new!
+
+mdlAlert: aBlock	^ self mdlAlert		with: aBlock;		yourself! !
 !WAHtmlCanvas categoriesFor: #leftPanel!*Material/Design/Lite/Extensions!public! !
 !WAHtmlCanvas categoriesFor: #leftPanelResizer!*Material/Design/Lite/Extensions!public! !
+!WAHtmlCanvas categoriesFor: #mdlAlert!*Material/Design/Lite/Extensions!public! !
+!WAHtmlCanvas categoriesFor: #mdlAlert:!*Material/Design/Lite/Extensions!public! !
 
 !WATagBrush methodsFor!
 

@@ -6,7 +6,7 @@ MDLExtensionsDemo subclass: #MDLLeftPanelScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLLeftPanelScreen guid: (GUID fromString: '{f137bcbf-148f-4870-9680-6a818291f9f8}')!
-MDLLeftPanelScreen comment: 'Description--------------------Screen to render resizable left panels examples.'!
+MDLLeftPanelScreen comment: 'Simple component to add a resizable left panel to a browser'!
 !MDLLeftPanelScreen categoriesForClass!Material-Design-Lite-Demo-Extensions! !
 !MDLLeftPanelScreen methodsFor!
 
@@ -27,12 +27,9 @@ renderScreenContentOn: html	self		render: self leftPanel fullWidth: true on: h
 
 !MDLLeftPanelScreen class methodsFor!
 
-description	^ 'Simple component to add a resizable left panel to a browser'!
-
 icon	^ 'extLeftPanelPng'!
 
 title	^ 'Left panel'! !
-!MDLLeftPanelScreen class categoriesFor: #description!accessing!public! !
 !MDLLeftPanelScreen class categoriesFor: #icon!accessing!public! !
 !MDLLeftPanelScreen class categoriesFor: #title!accessing!public! !
 

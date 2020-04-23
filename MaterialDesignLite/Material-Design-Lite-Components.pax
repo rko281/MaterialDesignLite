@@ -5,8 +5,12 @@ package paxVersion: 1;
 Created by DuneST
 https://github.com/DuneSt/MaterialDesignLite
 
-Dolphin Smalltalk port created 26th May 2019
-https://github.com/rko281/MaterialDesignLite'.
+Dolphin Smalltalk port updated 23rd April 2020
+https://github.com/rko281/MaterialDesignLite
+
+"Launch the Demo"
+(WAHttpServerAdaptor port: 8080) start.
+ShellLibrary default shellOpen: ''http://localhost:8080/MDLDemo/'''.
 
 
 package classNames
@@ -36,6 +40,12 @@ package classNames
 	add: #MDLDialogContent;
 	add: #MDLDialogTitle;
 	add: #MDLDivTag;
+	add: #MDLExpansionPanelContent;
+	add: #MDLExpansionPanelHeader;
+	add: #MDLExpansionPanelHeaderDescription;
+	add: #MDLExpansionPanelHeaderIcon;
+	add: #MDLExpansionPanelHeaderTitle;
+	add: #MDLExpansionPanelTag;
 	add: #MDLGrid;
 	add: #MDLIcon;
 	add: #MDLIconBadge;
@@ -167,6 +177,18 @@ package methodNames
 	add: #WAHtmlCanvas -> #mdlDialogTitle:;
 	add: #WAHtmlCanvas -> #mdlDiv;
 	add: #WAHtmlCanvas -> #mdlDiv:;
+	add: #WAHtmlCanvas -> #mdlExpansionPanel;
+	add: #WAHtmlCanvas -> #mdlExpansionPanel:;
+	add: #WAHtmlCanvas -> #mdlExpansionPanelContent;
+	add: #WAHtmlCanvas -> #mdlExpansionPanelContent:;
+	add: #WAHtmlCanvas -> #mdlExpansionPanelHeader;
+	add: #WAHtmlCanvas -> #mdlExpansionPanelHeader:;
+	add: #WAHtmlCanvas -> #mdlExpansionPanelHeaderDescription;
+	add: #WAHtmlCanvas -> #mdlExpansionPanelHeaderDescription:;
+	add: #WAHtmlCanvas -> #mdlExpansionPanelHeaderIcon;
+	add: #WAHtmlCanvas -> #mdlExpansionPanelHeaderIcon:;
+	add: #WAHtmlCanvas -> #mdlExpansionPanelHeaderTitle;
+	add: #WAHtmlCanvas -> #mdlExpansionPanelHeaderTitle:;
 	add: #WAHtmlCanvas -> #mdlFooter;
 	add: #WAHtmlCanvas -> #mdlFooter:;
 	add: #WAHtmlCanvas -> #mdlFooterBottomSection;
@@ -547,6 +569,31 @@ MDLDivTag subclass: #MDLDialogContent
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLExpansionPanelContent
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLExpansionPanelHeader
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLExpansionPanelHeaderDescription
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLExpansionPanelHeaderTitle
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLDivTag subclass: #MDLExpansionPanelTag
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
 MDLDivTag subclass: #MDLGrid
 	instanceVariableNames: ''
 	classVariableNames: ''
@@ -703,6 +750,11 @@ MDLCardInnerDiv subclass: #MDLCardTextContainer
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLCardInnerDiv subclass: #MDLCardTitleContainer
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLIcon subclass: #MDLExpansionPanelHeaderIcon
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
@@ -1011,6 +1063,30 @@ mdlDialogTitle: aBlock	^ self mdlDialogTitle		with: aBlock;		yourself!
 mdlDiv	^ self brush: MDLDivTag new !
 
 mdlDiv: aBlock	^ self mdlDiv		with: aBlock;		yourself!
+
+mdlExpansionPanel	^ self brush: MDLExpansionPanelTag new!
+
+mdlExpansionPanel: aBlock	^ self mdlExpansionPanel		with: aBlock!
+
+mdlExpansionPanelContent	^ self brush: MDLExpansionPanelContent new!
+
+mdlExpansionPanelContent: aBlock	^ self mdlExpansionPanelContent		with: aBlock!
+
+mdlExpansionPanelHeader	^ self brush: MDLExpansionPanelHeader new!
+
+mdlExpansionPanelHeader: aBlock	^ self mdlExpansionPanelHeader		with: aBlock!
+
+mdlExpansionPanelHeaderDescription	^ self brush: MDLExpansionPanelHeaderDescription new!
+
+mdlExpansionPanelHeaderDescription: aBlock	^ self mdlExpansionPanelHeaderDescription		with: aBlock!
+
+mdlExpansionPanelHeaderIcon	^ self brush: MDLExpansionPanelHeaderIcon new!
+
+mdlExpansionPanelHeaderIcon: aBlock	^ self mdlExpansionPanelHeaderIcon		with: aBlock!
+
+mdlExpansionPanelHeaderTitle	^ self brush: MDLExpansionPanelHeaderTitle new!
+
+mdlExpansionPanelHeaderTitle: aBlock	^ self mdlExpansionPanelHeaderTitle		with: aBlock!
 
 mdlFooter	^ self brush: MDLMegaFooter new !
 
@@ -1330,6 +1406,18 @@ mdlTooltip	^ self brush: MDLTooltip new! !
 !WAHtmlCanvas categoriesFor: #mdlDialogTitle:!*Material/Design/Lite/Components!public! !
 !WAHtmlCanvas categoriesFor: #mdlDiv!*Material/Design/Lite/Components!public! !
 !WAHtmlCanvas categoriesFor: #mdlDiv:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlExpansionPanel!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlExpansionPanel:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlExpansionPanelContent!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlExpansionPanelContent:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlExpansionPanelHeader!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlExpansionPanelHeader:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlExpansionPanelHeaderDescription!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlExpansionPanelHeaderDescription:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlExpansionPanelHeaderIcon!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlExpansionPanelHeaderIcon:!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlExpansionPanelHeaderTitle!*Material/Design/Lite/Components!public! !
+!WAHtmlCanvas categoriesFor: #mdlExpansionPanelHeaderTitle:!*Material/Design/Lite/Components!public! !
 !WAHtmlCanvas categoriesFor: #mdlFooter!*Material/Design/Lite/Components!public! !
 !WAHtmlCanvas categoriesFor: #mdlFooter:!*Material/Design/Lite/Components!public! !
 !WAHtmlCanvas categoriesFor: #mdlFooterBottomSection!*Material/Design/Lite/Components!public! !

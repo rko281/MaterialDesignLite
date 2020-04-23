@@ -5,11 +5,16 @@ package paxVersion: 1;
 Created by DuneST
 https://github.com/DuneSt/MaterialDesignLite
 
-Dolphin Smalltalk port created 26th May 2019
-https://github.com/rko281/MaterialDesignLite'.
+Dolphin Smalltalk port updated 23rd April 2020
+https://github.com/rko281/MaterialDesignLite
+
+"Launch the Demo"
+(WAHttpServerAdaptor port: 8080) start.
+ShellLibrary default shellOpen: ''http://localhost:8080/MDLDemo/'''.
 
 
 package classNames
+	add: #MDLAlertTest;
 	add: #MDLFoldButtonTest;
 	add: #MDLLeftPanelResizerTest;
 	add: #MDLMockRootDialogRenderer;
@@ -30,10 +35,10 @@ package setPrerequisites: #(
 	'..\Core\Object Arts\Dolphin\Base\Dolphin'
 	'..\Seaside\Javascript\Javascript-Core'
 	'Material-Design-Lite-Components'
-	'Material-Design-Lite-Components-Tests'
 	'Material-Design-Lite-Extensions'
 	'..\Portishead\Portishead-Core'
-	'..\Seaside\Seaside\Seaside-Component').
+	'..\Seaside\Seaside\Seaside-Component'
+	'SeasideGenerationTester').
 
 package!
 
@@ -44,37 +49,42 @@ WAComponent subclass: #MDLMockRootDialogRenderer
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-MDLAbstractSeasideTestCase subclass: #MDLFoldButtonTest
+SGTAbstractSeasideTestCase subclass: #MDLFoldButtonTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-MDLAbstractSeasideTestCase subclass: #MDLLeftPanelResizerTest
+SGTAbstractSeasideTestCase subclass: #MDLLeftPanelResizerTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-MDLAbstractSeasideTestCase subclass: #MDLPaginationComponentTest
+SGTAbstractSeasideTestCase subclass: #MDLPaginationComponentTest
 	instanceVariableNames: 'component'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-MDLAbstractSeasideTestCase subclass: #MDLPanelSwitcherButtonTest
+SGTAbstractSeasideTestCase subclass: #MDLPanelSwitcherButtonTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-MDLAbstractSeasideTestCase subclass: #MDLRightPanelResizerTest
+SGTAbstractSeasideTestCase subclass: #MDLRightPanelResizerTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-MDLAbstractSeasideTestCase subclass: #MDLTRootDialogRendererTest
+SGTAbstractSeasideTestCase subclass: #MDLTRootDialogRendererTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-MDLAbstractSeasideTestCase subclass: #MDLVerticalToolbarTest
+SGTAbstractSeasideTestCase subclass: #MDLVerticalToolbarTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+SGTAbstractBrushTest subclass: #MDLAlertTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''

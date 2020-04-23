@@ -36,7 +36,7 @@ propertiesAt: aString ifPresent: aBlock ifAbsent: anotherBlock	^ self propertie
 
 propertiesAt: aString put: anArray	self properties at: aString put: anArray!
 
-style: aString	| stringToAdd |	aString isEmptyOrNil ifTrue: [ ^ self ].	stringToAdd := self		propertiesAt: #style:		ifPresent: [ :oldStyle | 			String				streamContents: [ :aStream | 					aStream						nextPutAll: oldStyle anyOne;						space;						nextPutAll: aString ] ]		ifAbsent: [ aString ].	self propertiesAt: #style: put: stringToAdd! !
+style: aString	| stringToAdd |	aString isEmptyOrNil ifTrue: [ ^ self ].	stringToAdd := self		propertiesAt: #style:		ifPresent: [ :oldStyle | 			String				streamContents: [ :aStream | 					aStream						nextPutAll: oldStyle anyOne;						space;						nextPutAll: aString ] ]		ifAbsent: [ aString ].	self propertiesAt: #style: put: {stringToAdd}! !
 !MDLHighLevelWidget categoriesFor: #addProperties:!accessing!public! !
 !MDLHighLevelWidget categoriesFor: #addPropertiesToBrush:!actions!public! !
 !MDLHighLevelWidget categoriesFor: #class:!accessing!public! !

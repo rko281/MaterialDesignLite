@@ -1,6 +1,6 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-MDLAbstractBrushTest subclass: #MDLChipTextTagTest
+SGTAbstractBrushTest subclass: #MDLChipTextTagTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''

@@ -6,7 +6,7 @@ MDLComponentDemo subclass: #MDLTextFieldsScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLTextFieldsScreen guid: (GUID fromString: '{ee706199-af1e-4968-b2a6-f0441d13e83f}')!
-MDLTextFieldsScreen comment: 'I am representing text field screen.'!
+MDLTextFieldsScreen comment: 'Textual input components.'!
 !MDLTextFieldsScreen categoriesForClass!Material-Design-Lite-Demo-Components! !
 !MDLTextFieldsScreen methodsFor!
 
@@ -45,12 +45,9 @@ specialTextFields	^ OrderedDictionary new		add: 'Multiple line' -> #renderMult
 
 !MDLTextFieldsScreen class methodsFor!
 
-description	^ 'Textual input components.'!
-
 icon	^'comptextfieldsPng'!
 
 title	^ 'Text Fields'! !
-!MDLTextFieldsScreen class categoriesFor: #description!accessing!public! !
 !MDLTextFieldsScreen class categoriesFor: #icon!accessing!public! !
 !MDLTextFieldsScreen class categoriesFor: #title!accessing!public! !
 

@@ -6,7 +6,7 @@ MDLExtensionsDemo subclass: #MDLRootDialogScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLRootDialogScreen guid: (GUID fromString: '{f5d5beac-9a15-4920-af08-18685b40dc2b}')!
-MDLRootDialogScreen comment: 'Description--------------------Screen to render root dialog examples.'!
+MDLRootDialogScreen comment: 'This extension provides Traits to ease the use of MDL dialogs. The principle is to add an empty dialog at the root of the application, then open it through methods available on any Seaside brush and render the content via ajax. One Trait needs to be used on the root component of the web application to add an empty hidden dialog. A second Trait needs to be used by the components wanting to open a dialog and provide the necessary methods to open the root dialog and to fill its content with ajax.'!
 !MDLRootDialogScreen categoriesForClass!Material-Design-Lite-Demo-Extensions! !
 !MDLRootDialogScreen methodsFor!
 
@@ -24,12 +24,9 @@ warningMessage	^ 'This extension is not available in the Gemstone version of th
 
 !MDLRootDialogScreen class methodsFor!
 
-description	^ 'This extension provides Traits to ease the use of MDL dialogs. The principle is to add an empty dialog at the root of the application, then open it through methods available on any Seaside brush and render the content via ajax. One Trait needs to be used on the root component of the web application to add an empty hidden dialog. A second Trait needs to be used by the components wanting to open a dialog and provide the necessary methods to open the root dialog and to fill its content with ajax.'!
-
 icon	^ 'compdialogPng'!
 
 title	^ 'Root dialog'! !
-!MDLRootDialogScreen class categoriesFor: #description!accessing!public! !
 !MDLRootDialogScreen class categoriesFor: #icon!accessing!public! !
 !MDLRootDialogScreen class categoriesFor: #title!accessing!public! !
 

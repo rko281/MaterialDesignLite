@@ -6,7 +6,7 @@ MDLExtensionsDemo subclass: #MDLRightTabsPanelScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLRightTabsPanelScreen guid: (GUID fromString: '{7622252e-0a09-47ed-ba45-a534dd6d3fb3}')!
-MDLRightTabsPanelScreen comment: 'Description--------------------Screen to render resizable right panel with tabs examples.'!
+MDLRightTabsPanelScreen comment: 'Extension to create a browser with a resizable right panel with tabs.'!
 !MDLRightTabsPanelScreen categoriesForClass!Material-Design-Lite-Demo-Extensions! !
 !MDLRightTabsPanelScreen methodsFor!
 
@@ -30,12 +30,9 @@ warningMessage	^ 'This extension is not available in the Gemstone version of th
 
 !MDLRightTabsPanelScreen class methodsFor!
 
-description	^ 'Extension to create a browser with a resizable right panel with tabs.'!
-
 icon	^ 'extRightPanelPng'!
 
 title	^ 'Right panel with tabs'! !
-!MDLRightTabsPanelScreen class categoriesFor: #description!accessing!public! !
 !MDLRightTabsPanelScreen class categoriesFor: #icon!accessing!public! !
 !MDLRightTabsPanelScreen class categoriesFor: #title!accessing!public! !
 

@@ -1,6 +1,6 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-MDLAbstractSeasideTestCase subclass: #MDLDatePickerTest
+SGTAbstractSeasideTestCase subclass: #MDLDatePickerTest
 	instanceVariableNames: 'calendar'
 	classVariableNames: ''
 	poolDictionaries: ''
@@ -28,9 +28,9 @@ testIsTodayAndNotSelected	| today tommorow |	today := Date today.	tommorow :=
 
 testJsOnCompleteScript	calendar onCompleteScript: 'console.log("test")' js.	self assert: (calendar jsOnCompleteScript isKindOf: JSStream).	self assert: calendar jsOnCompleteScript contents equals: 'console.log("test")'.	calendar onCompleteScript: 'console.log("test")'.	self assert: (calendar jsOnCompleteScript isKindOf: JSStream).	self assert: calendar jsOnCompleteScript contents equals: 'console.log("test")'!
 
-testRenderMonthesOn	self assert: [ :html | calendar renderMonthesOn: html ] generatedIncludesAll: Date monthNames.	calendar currentDate: (Date year: 2018 month: 6 day: 5).	self assert: [ :html | calendar renderMonthesOn: html ] generatedIncludes: 'May</div><div class="mdl-cell month-cell active mdl-cell--4-col-desktop"' "June need to be active"!
+testRenderMonthesOn	self assert: [ :html | calendar renderMonthesOn: html ] generatedIncludesAll: Date monthNames.	calendar currentDate: (Date year: 2018 month: 6 day: 5).	self assert: [ :html | calendar renderMonthesOn: html ] generatedIncludes: 'May</div><div class="mdl-cell month-cell mdl-color-text--primary mdl-color-text--primary-contrast mdl-color--primary active mdl-cell--4-col-desktop"' "Needs to be active and get additional classes to show it selected."!
 
-testRenderYearsOn	self assert: [ :html | calendar renderYearsOn: html ] generatedIncludesAll: (calendar calendar yearsInterval collect: #asString).	calendar currentDate: (Date year: 2018 month: 6 day: 5).	self assert: [ :html | calendar renderYearsOn: html ] generatedIncludes: '2017</div><div class="mdl-cell year-cell active mdl-cell--4-col-desktop"' "2018 need to be active"!
+testRenderYearsOn	self assert: [ :html | calendar renderYearsOn: html ] generatedIncludesAll: (calendar calendar yearsInterval collect: #asString).	calendar currentDate: (Date year: 2018 month: 6 day: 5).	self assert: [ :html | calendar renderYearsOn: html ] generatedIncludes: '2017</div><div class="mdl-cell year-cell mdl-color-text--primary mdl-color-text--primary-contrast mdl-color--primary active mdl-cell--4-col-desktop"' "2018 need to be active"!
 
 testSelectedDateIs	calendar currentDate: (Date year: 2018 month: 6 day: 5).	self assert: (calendar selectedDateIs: (Date year: 2018 month: 6 day: 5)).	self deny: (calendar selectedDateIs: (Date year: 2018 month: 6 day: 4))! !
 !MDLDatePickerTest categoriesFor: #setUp!public!running! !

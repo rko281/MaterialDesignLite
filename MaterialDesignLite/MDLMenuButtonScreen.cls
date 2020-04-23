@@ -6,7 +6,7 @@ MDLWidgetDemo subclass: #MDLMenuButtonScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLMenuButtonScreen guid: (GUID fromString: '{24bb8596-3a3c-4e16-8241-8f72e647d169}')!
-MDLMenuButtonScreen comment: 'Demo screen for the MDLMenuButtonWidget'!
+MDLMenuButtonScreen comment: 'A widget to create a button that expand to show a menu when clicked'!
 !MDLMenuButtonScreen categoriesForClass!Material-Design-Lite-Demo-Widgets! !
 !MDLMenuButtonScreen methodsFor!
 
@@ -27,12 +27,9 @@ textMenuButton	^ OrderedDictionary new		add: 'Menu Button' -> #renderMenuButto
 
 !MDLMenuButtonScreen class methodsFor!
 
-description	^ 'A widget to create a button that expand to show a menu when clicked'!
-
 icon	^ #compmenusPng!
 
 title	^ 'Menu Button'! !
-!MDLMenuButtonScreen class categoriesFor: #description!accessing!public! !
 !MDLMenuButtonScreen class categoriesFor: #icon!accessing!public! !
 !MDLMenuButtonScreen class categoriesFor: #title!accessing!public! !
 

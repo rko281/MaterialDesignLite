@@ -1,0 +1,50 @@
+﻿| package |
+package := Package name: 'SeasideGenerationTester'.
+package paxVersion: 1;
+	basicComment: ''.
+
+
+package classNames
+	add: #SGTAbstractBrushTest;
+	add: #SGTAbstractSeasideTestCase;
+	add: #SGTMockRequestContext;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: #(
+	'..\Seaside\Seaside\Seaside-Canvas'
+	'..\Seaside\Seaside\Seaside-Core'
+	'..\Core\Contributions\Camp Smalltalk\SUnit\SUnit').
+
+package!
+
+"Class Definitions"!
+
+WARequestContext subclass: #SGTMockRequestContext
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #SGTAbstractSeasideTestCase
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+SGTAbstractSeasideTestCase subclass: #SGTAbstractBrushTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+"End of package definition"!
+

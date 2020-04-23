@@ -6,7 +6,7 @@ MDLWidgetDemo subclass: #MDLSortedTableScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLSortedTableScreen guid: (GUID fromString: '{e093054f-27d3-46e9-aac5-686cdcce6e5c}')!
-MDLSortedTableScreen comment: 'Screen to render MDLSortedTable examples'!
+MDLSortedTableScreen comment: 'A widget to get a paginated table with a sort function.'!
 !MDLSortedTableScreen categoriesForClass!Material-Design-Lite-Demo-Widgets! !
 !MDLSortedTableScreen methodsFor!
 
@@ -21,12 +21,9 @@ table	^ OrderedDictionary new		add: 'Sorted Table Widget' -> #renderSortedTabl
 
 !MDLSortedTableScreen class methodsFor!
 
-description	^ 'A widget to get a paginated table with a sort function.'!
-
 icon	^ #comptablesPng!
 
 title	^ 'Sorted Table'! !
-!MDLSortedTableScreen class categoriesFor: #description!accessing!public! !
 !MDLSortedTableScreen class categoriesFor: #icon!accessing!public! !
 !MDLSortedTableScreen class categoriesFor: #title!accessing!public! !
 

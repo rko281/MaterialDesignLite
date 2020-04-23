@@ -6,7 +6,7 @@ MDLComponentDemo subclass: #MDLListsScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLListsScreen guid: (GUID fromString: '{6cb8e03e-ee94-47f9-ade4-f6d3cf67b39e}')!
-MDLListsScreen comment: 'I''m representing list screen'!
+MDLListsScreen comment: 'Customizable scrollable lists.'!
 !MDLListsScreen categoriesForClass!Material-Design-Lite-Demo-Components! !
 !MDLListsScreen methodsFor!
 
@@ -51,12 +51,9 @@ twoLineList	^ OrderedDictionary new		add: 'Two line ' -> #renderTwoLineListOn:
 
 !MDLListsScreen class methodsFor!
 
-description	^ 'Customizable scrollable lists.'!
-
 icon		^ 'complistsPng'!
 
 title	^ 'Lists'! !
-!MDLListsScreen class categoriesFor: #description!accessing!public! !
 !MDLListsScreen class categoriesFor: #icon!accessing!public! !
 !MDLListsScreen class categoriesFor: #title!accessing!public! !
 

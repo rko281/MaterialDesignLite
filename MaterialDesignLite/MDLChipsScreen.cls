@@ -6,7 +6,7 @@ MDLComponentDemo subclass: #MDLChipsScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLChipsScreen guid: (GUID fromString: '{50c487d8-93ea-4c04-ba3b-ee7bfc690dc0}')!
-MDLChipsScreen comment: 'I am the screen representing chips.'!
+MDLChipsScreen comment: 'Chips represent complex entities in small blocks, such as a contact.'!
 !MDLChipsScreen categoriesForClass!Material-Design-Lite-Demo-Components! !
 !MDLChipsScreen methodsFor!
 
@@ -42,12 +42,9 @@ simpleChips	^ OrderedDictionary new		add: 'Simple Chip' -> #renderSimpleChipOn
 
 !MDLChipsScreen class methodsFor!
 
-description	^ 'Chips represent complex entities in small blocks, such as a contact.'!
-
 icon	^ 'compchipsPng'!
 
 title	^ 'Chips'! !
-!MDLChipsScreen class categoriesFor: #description!accessing!public! !
 !MDLChipsScreen class categoriesFor: #icon!accessing!public! !
 !MDLChipsScreen class categoriesFor: #title!accessing!public! !
 

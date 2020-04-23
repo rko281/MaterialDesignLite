@@ -6,7 +6,7 @@ MDLComponentDemo subclass: #MDLLoadingScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLLoadingScreen guid: (GUID fromString: '{47029c97-9c2b-4f7b-a1fb-247b4bcfd1a3}')!
-MDLLoadingScreen comment: 'I represent loading components screen.'!
+MDLLoadingScreen comment: 'Indicate loading and progress states.'!
 !MDLLoadingScreen categoriesForClass!Material-Design-Lite-Demo-Components! !
 !MDLLoadingScreen methodsFor!
 
@@ -45,12 +45,9 @@ spinner	^ OrderedDictionary new		add: 'Default' -> #renderDefaultSpinnerOn:;	
 
 !MDLLoadingScreen class methodsFor!
 
-description	^ 'Indicate loading and progress states.'!
-
 icon	^ 'comploadingPng'!
 
 title	^ 'Loading'! !
-!MDLLoadingScreen class categoriesFor: #description!accessing!public! !
 !MDLLoadingScreen class categoriesFor: #icon!accessing!public! !
 !MDLLoadingScreen class categoriesFor: #title!accessing!public! !
 

@@ -1,6 +1,6 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-MDLAbstractBrushTest subclass: #MDLCheckboxTest
+SGTAbstractBrushTest subclass: #MDLCheckboxTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''

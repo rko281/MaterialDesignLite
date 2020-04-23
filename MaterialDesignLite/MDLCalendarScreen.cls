@@ -6,7 +6,7 @@ MDLWidgetDemo subclass: #MDLCalendarScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLCalendarScreen guid: (GUID fromString: '{e449e049-1d2c-43b8-ba9e-fd181df3f60e}')!
-MDLCalendarScreen comment: 'Screen to render MDLCalendarWidget examples'!
+MDLCalendarScreen comment: 'A calendar in Material Design style to pick a date'!
 !MDLCalendarScreen categoriesForClass!Material-Design-Lite-Demo-Widgets! !
 !MDLCalendarScreen methodsFor!
 
@@ -30,12 +30,9 @@ renderScreenContentOn: html	self		render: self datePicker on: html;		render: 
 
 !MDLCalendarScreen class methodsFor!
 
-description	^ 'A calendar in Material Design style to pick a date'!
-
 icon	^ #compcalendarPng!
 
 title	^ 'Date Picker'! !
-!MDLCalendarScreen class categoriesFor: #description!accessing!public! !
 !MDLCalendarScreen class categoriesFor: #icon!accessing!public! !
 !MDLCalendarScreen class categoriesFor: #title!accessing!public! !
 

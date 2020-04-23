@@ -1,12 +1,7 @@
 ﻿| package |
 package := Package name: 'Material-Design-Lite-Widgets'.
 package paxVersion: 1;
-	basicComment: 'Material Design Lite for Seaside
-Created by DuneST
-https://github.com/DuneSt/MaterialDesignLite
-
-Dolphin Smalltalk port created 26th May 2019
-https://github.com/rko281/MaterialDesignLite'.
+	basicComment: ''.
 
 
 package classNames
@@ -15,7 +10,10 @@ package classNames
 	add: #MDLAbstractFooterLinksList;
 	add: #MDLAbstractHeaderSection;
 	add: #MDLAbstractLayoutSection;
+	add: #MDLAjaxButtonColumnDescription;
+	add: #MDLAjaxExpansionStrategy;
 	add: #MDLBeginsWithFilter;
+	add: #MDLButtonColumnDescription;
 	add: #MDLCalendar;
 	add: #MDLCardActionsWidget;
 	add: #MDLCardMediaWidget;
@@ -25,6 +23,8 @@ package classNames
 	add: #MDLContentCenterer;
 	add: #MDLDatePicker;
 	add: #MDLDialogWidget;
+	add: #MDLExpansionPanel;
+	add: #MDLExpansionStrategy;
 	add: #MDLFlatDatePicker;
 	add: #MDLFooter;
 	add: #MDLFooterAbstractSection;
@@ -32,12 +32,14 @@ package classNames
 	add: #MDLFooterDropdownSection;
 	add: #MDLFooterLinksSection;
 	add: #MDLFooterNilSection;
+	add: #MDLHideExpansionStrategy;
 	add: #MDLHighLevelWidget;
 	add: #MDLIconComponent;
 	add: #MDLIconDrawerSection;
 	add: #MDLInsensitiveBeginsWithFilter;
 	add: #MDLInsensitiveSubstringFilter;
 	add: #MDLLayoutWidget;
+	add: #MDLLazyExpansionStrategy;
 	add: #MDLLinkingLayoutSection;
 	add: #MDLListIconComponent;
 	add: #MDLLoginCardWidget;
@@ -51,6 +53,7 @@ package classNames
 	add: #MDLNestedListTreeNode;
 	add: #MDLNewPasswordWidget;
 	add: #MDLNilLayoutSection;
+	add: #MDLNumericColumnDescription;
 	add: #MDLPoll;
 	add: #MDLPollWidget;
 	add: #MDLProgressBarWidget;
@@ -66,8 +69,11 @@ package classNames
 	add: #MDLSortableTableHeaderElementUnsorted;
 	add: #MDLSortableTableHeaderNumeric;
 	add: #MDLSortableTableHeaderState;
+	add: #MDLStringColumnDescription;
 	add: #MDLSubstringFilter;
 	add: #MDLSwitchWidget;
+	add: #MDLTableColumnDescription;
+	add: #MDLTableWidget;
 	add: #MDLTabWidget;
 	add: #MDLTextAreaWidget;
 	add: #MDLTextFieldWidget;
@@ -117,6 +123,11 @@ Object subclass: #MDLCalendar
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
+Object subclass: #MDLExpansionStrategy
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
 Object subclass: #MDLFooterAbstractSection
 	instanceVariableNames: ''
 	classVariableNames: ''
@@ -134,6 +145,11 @@ Object subclass: #MDLSortableTableHeader
 	classInstanceVariableNames: ''!
 Object subclass: #MDLSortableTableHeaderState
 	instanceVariableNames: 'nextState'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Object subclass: #MDLTableColumnDescription
+	instanceVariableNames: 'title evaluation idBlock'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
@@ -167,6 +183,11 @@ WAComponent subclass: #MDLSortableTable
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
+WAComponent subclass: #MDLTableWidget
+	instanceVariableNames: 'columnDescriptions collection'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
 WAComponent subclass: #MDLWidget
 	instanceVariableNames: 'id value'
 	classVariableNames: ''
@@ -179,6 +200,11 @@ MDLWidget subclass: #MDLAbstractLayoutSection
 	classInstanceVariableNames: ''!
 MDLWidget subclass: #MDLDialogWidget
 	instanceVariableNames: 'title content actions buttonName closeButtonName buttonBrush dialogBrush'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidget subclass: #MDLExpansionPanel
+	instanceVariableNames: 'title descriptions expandedBlock isExpanded shadow expansionStrategy'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
@@ -367,6 +393,21 @@ MDLAbstractFooterLinksList subclass: #MDLMiniFooterLinksList
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
+MDLExpansionStrategy subclass: #MDLAjaxExpansionStrategy
+	instanceVariableNames: 'onFoldBlock onExpandBlock'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLExpansionStrategy subclass: #MDLHideExpansionStrategy
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLExpansionStrategy subclass: #MDLLazyExpansionStrategy
+	instanceVariableNames: 'currentStrategy'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
 MDLFooterAbstractSection subclass: #MDLFooterComponentsSection
 	instanceVariableNames: 'components'
 	classVariableNames: ''
@@ -403,6 +444,26 @@ MDLSortableTableHeaderState subclass: #MDLSortableTableHeaderElementSortedDescen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLSortableTableHeaderState subclass: #MDLSortableTableHeaderElementUnsorted
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLTableColumnDescription subclass: #MDLButtonColumnDescription
+	instanceVariableNames: 'onClickBlock iconName tooltip'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLTableColumnDescription subclass: #MDLNumericColumnDescription
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLTableColumnDescription subclass: #MDLStringColumnDescription
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLButtonColumnDescription subclass: #MDLAjaxButtonColumnDescription
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''

@@ -1,35 +1,36 @@
 ﻿| package |
 package := Package name: 'Material-Design-Lite-Widgets-Tests'.
 package paxVersion: 1;
-	basicComment: 'Material Design Lite for Seaside
-Created by DuneST
-https://github.com/DuneSt/MaterialDesignLite
-
-Dolphin Smalltalk port created 26th May 2019
-https://github.com/rko281/MaterialDesignLite'.
+	basicComment: ''.
 
 
 package classNames
 	add: #ManifestMaterialDesignLiteWidgetsTests;
 	add: #MDLAbstractFilterTest;
+	add: #MDLAjaxButtonColumnDescriptionTest;
 	add: #MDLBeginsWithFilterTest;
+	add: #MDLButtonColumnDescriptionTest;
 	add: #MDLCalendarTest;
 	add: #MDLCardWidgetTests;
 	add: #MDLDatePickerTest;
 	add: #MDLDialogWidgetSimpleWidgetMock;
 	add: #MDLDialogWidgetTests;
+	add: #MDLExpansionPanelTest;
 	add: #MDLInsensitiveBeginsWithFilterTest;
 	add: #MDLInsensitiveSubstringFilterTest;
 	add: #MDLListIconComponentTest;
 	add: #MDLMenuButtonWidgetTests;
 	add: #MDLNestedListTest;
+	add: #MDLNumericColumnDescriptionTest;
 	add: #MDLPollTests;
 	add: #MDLPollWidgetTests;
 	add: #MDLProgressBarWidgetTests;
 	add: #MDLPseudoRegexFilterTest;
 	add: #MDLSelectWidgetTests;
 	add: #MDLSortableTableHeaderTests;
+	add: #MDLStringColumnDescriptionTest;
 	add: #MDLSubstringFilterTest;
+	add: #MDLTableWidgetTest;
 	add: #MDLTabsWidgetTest;
 	yourself.
 
@@ -44,10 +45,10 @@ package setPrerequisites: #(
 	'..\Core\Object Arts\Dolphin\Base\Dolphin Legacy Date & Time'
 	'..\Seaside\Javascript\Javascript-Core'
 	'Material-Design-Lite-Components'
-	'Material-Design-Lite-Components-Tests'
 	'Material-Design-Lite-Widgets'
 	'..\Portishead\Portishead-Core'
 	'..\Seaside\Seaside\Seaside-Component'
+	'SeasideGenerationTester'
 	'..\Core\Contributions\Camp Smalltalk\SUnit\SUnit').
 
 package!
@@ -71,6 +72,11 @@ TestCase subclass: #MDLAbstractFilterTest
 	classInstanceVariableNames: ''!
 TestCase subclass: #MDLCalendarTest
 	instanceVariableNames: 'calendar'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+TestCase subclass: #MDLExpansionPanelTest
+	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
@@ -114,47 +120,72 @@ MDLAbstractFilterTest subclass: #MDLSubstringFilterTest
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-MDLAbstractSeasideTestCase subclass: #MDLCardWidgetTests
+SGTAbstractSeasideTestCase subclass: #MDLAjaxButtonColumnDescriptionTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+SGTAbstractSeasideTestCase subclass: #MDLButtonColumnDescriptionTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+SGTAbstractSeasideTestCase subclass: #MDLCardWidgetTests
 	instanceVariableNames: 'card'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-MDLAbstractSeasideTestCase subclass: #MDLDatePickerTest
+SGTAbstractSeasideTestCase subclass: #MDLDatePickerTest
 	instanceVariableNames: 'calendar'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-MDLAbstractSeasideTestCase subclass: #MDLDialogWidgetTests
+SGTAbstractSeasideTestCase subclass: #MDLDialogWidgetTests
 	instanceVariableNames: 'dialog'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-MDLAbstractSeasideTestCase subclass: #MDLListIconComponentTest
+SGTAbstractSeasideTestCase subclass: #MDLListIconComponentTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-MDLAbstractSeasideTestCase subclass: #MDLMenuButtonWidgetTests
+SGTAbstractSeasideTestCase subclass: #MDLMenuButtonWidgetTests
 	instanceVariableNames: 'menu'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-MDLAbstractSeasideTestCase subclass: #MDLNestedListTest
+SGTAbstractSeasideTestCase subclass: #MDLNestedListTest
 	instanceVariableNames: 'list'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-MDLAbstractSeasideTestCase subclass: #MDLProgressBarWidgetTests
+SGTAbstractSeasideTestCase subclass: #MDLNumericColumnDescriptionTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-MDLAbstractSeasideTestCase subclass: #MDLSelectWidgetTests
+SGTAbstractSeasideTestCase subclass: #MDLProgressBarWidgetTests
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+SGTAbstractSeasideTestCase subclass: #MDLSelectWidgetTests
 	instanceVariableNames: 'select'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-MDLAbstractSeasideTestCase subclass: #MDLTabsWidgetTest
+SGTAbstractSeasideTestCase subclass: #MDLStringColumnDescriptionTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+SGTAbstractSeasideTestCase subclass: #MDLTableWidgetTest
+	instanceVariableNames: 'table'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+SGTAbstractSeasideTestCase subclass: #MDLTabsWidgetTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''

@@ -6,7 +6,7 @@ MDLWidgetDemo subclass: #MDLCardWidgetScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLCardWidgetScreen guid: (GUID fromString: '{7cf14f20-d3b5-4d76-b585-b76b42d8f28c}')!
-MDLCardWidgetScreen comment: 'Screen to render MDLCardWidget examples'!
+MDLCardWidgetScreen comment: 'A Card widget to make easy the use of the cards.'!
 !MDLCardWidgetScreen categoriesForClass!Material-Design-Lite-Demo-Widgets! !
 !MDLCardWidgetScreen methodsFor!
 
@@ -33,12 +33,9 @@ titleColorCardWidget	^ OrderedDictionary new		add: 'Primary color card' -> #re
 
 !MDLCardWidgetScreen class methodsFor!
 
-description	^ 'A Card widget to make easy the use of the cards.'!
-
 icon	^ 'compcardsPng'!
 
 title	^ 'Cards'! !
-!MDLCardWidgetScreen class categoriesFor: #description!accessing!public! !
 !MDLCardWidgetScreen class categoriesFor: #icon!accessing!public! !
 !MDLCardWidgetScreen class categoriesFor: #title!accessing!public! !
 

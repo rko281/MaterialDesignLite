@@ -5,12 +5,17 @@ package paxVersion: 1;
 Created by DuneST
 https://github.com/DuneSt/MaterialDesignLite
 
-Dolphin Smalltalk port created 26th May 2019
-https://github.com/rko281/MaterialDesignLite'.
+Dolphin Smalltalk port updated 23rd April 2020
+https://github.com/rko281/MaterialDesignLite
+
+"Launch the Demo"
+(WAHttpServerAdaptor port: 8080) start.
+ShellLibrary default shellOpen: ''http://localhost:8080/MDLDemo/'''.
 
 
 package classNames
 	add: #ManifestMaterialDesignLiteDemo;
+	add: #MDLAlertsScreen;
 	add: #MDLAnchorButtonsScreen;
 	add: #MDLBadgesScreen;
 	add: #MDLButtonsScreen;
@@ -39,6 +44,8 @@ package classNames
 	add: #MDLExampleRightPanel2;
 	add: #MDLExampleRootDialogRoot;
 	add: #MDLExampleRootDialogUser;
+	add: #MDLExpansionPanelScreen;
+	add: #MDLExpansionPanelWidgetScreen;
 	add: #MDLExtensionsDemo;
 	add: #MDLExtensionsDemoPage;
 	add: #MDLLayoutScreen;
@@ -59,6 +66,7 @@ package classNames
 	add: #MDLSnackbarScreen;
 	add: #MDLSortedTableScreen;
 	add: #MDLTablesScreen;
+	add: #MDLTableWidgetScreen;
 	add: #MDLTabScreen;
 	add: #MDLTextFieldsScreen;
 	add: #MDLTogglesScreen;
@@ -245,6 +253,11 @@ MDLComponentDemo subclass: #MDLElevationScreen
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
+MDLComponentDemo subclass: #MDLExpansionPanelScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
 MDLComponentDemo subclass: #MDLLayoutScreen
 	instanceVariableNames: ''
 	classVariableNames: ''
@@ -300,6 +313,11 @@ MDLComponentDemo subclass: #MDLTypographyScreen
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
+MDLExtensionsDemo subclass: #MDLAlertsScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
 MDLExtensionsDemo subclass: #MDLLeftPanelScreen
 	instanceVariableNames: ''
 	classVariableNames: ''
@@ -330,6 +348,11 @@ MDLWidgetDemo subclass: #MDLCardWidgetScreen
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
+MDLWidgetDemo subclass: #MDLExpansionPanelWidgetScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
 MDLWidgetDemo subclass: #MDLMenuButtonScreen
 	instanceVariableNames: 'selectedUser'
 	classVariableNames: ''
@@ -356,6 +379,11 @@ MDLWidgetDemo subclass: #MDLSelectScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLWidgetDemo subclass: #MDLSortedTableScreen
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+MDLWidgetDemo subclass: #MDLTableWidgetScreen
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''

@@ -45,7 +45,7 @@ warningMessage	"Potential warning message to display"	^ nil! !
 
 !MDLDemoScreen class methodsFor!
 
-description	"I should return a String that is the global description of the component."		^ self subclassResponsibility!
+description	^ self comment!
 
 icon	self subclassResponsibility !
 

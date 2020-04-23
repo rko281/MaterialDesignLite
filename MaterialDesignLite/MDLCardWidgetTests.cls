@@ -1,6 +1,6 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-MDLAbstractSeasideTestCase subclass: #MDLCardWidgetTests
+SGTAbstractSeasideTestCase subclass: #MDLCardWidgetTests
 	instanceVariableNames: 'card'
 	classVariableNames: ''
 	poolDictionaries: ''

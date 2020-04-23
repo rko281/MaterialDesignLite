@@ -1,6 +1,6 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-MDLAbstractSeasideTestCase subclass: #MDLMenuButtonWidgetTests
+SGTAbstractSeasideTestCase subclass: #MDLMenuButtonWidgetTests
 	instanceVariableNames: 'menu'
 	classVariableNames: ''
 	poolDictionaries: ''

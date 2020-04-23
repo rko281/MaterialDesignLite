@@ -10,6 +10,6 @@ MDLExtensionsDemo comment: 'MDLExtensionsDemo class	instanceVariableNames: ''''
 !MDLExtensionsDemo categoriesForClass!Material-Design-Lite-Demo-Extensions! !
 !MDLExtensionsDemo class methodsFor!
 
-icon	^ 'logoSvg'! !
-!MDLExtensionsDemo class categoriesFor: #icon!accessing!public! !
+isAbstract	^ self = MDLExtensionsDemo! !
+!MDLExtensionsDemo class categoriesFor: #isAbstract!public!testing! !
 

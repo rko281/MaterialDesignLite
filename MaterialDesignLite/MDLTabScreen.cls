@@ -6,7 +6,7 @@ MDLWidgetDemo subclass: #MDLTabScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLTabScreen guid: (GUID fromString: '{8587f220-fcba-43d9-af6e-21f46bc215f2}')!
-MDLTabScreen comment: 'Screen to render MDLTabWidget examples'!
+MDLTabScreen comment: 'A tab widget.'!
 !MDLTabScreen categoriesForClass!Material-Design-Lite-Demo-Widgets! !
 !MDLTabScreen methodsFor!
 
@@ -21,12 +21,9 @@ tabs	^ OrderedDictionary new		add: 'Tab Widget' -> #renderTabsOn:;		yourself!
 
 !MDLTabScreen class methodsFor!
 
-description	^ 'A tab widget.'!
-
 icon	^ #complayoutPng!
 
 title	^ 'Tabs'! !
-!MDLTabScreen class categoriesFor: #description!accessing!public! !
 !MDLTabScreen class categoriesFor: #icon!accessing!public! !
 !MDLTabScreen class categoriesFor: #title!accessing!public! !
 

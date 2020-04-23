@@ -76,7 +76,7 @@ renderDate: aDate on: html	html tableData with: [ self displayDate: aDate on: h
 
 renderDaysOn: html	html tableColumnGroup: [ 1 to: 7 do: [ :i | html tableColumn width: '14,3%' ] ].	html tableHead: [ html tableRow: [ self daysList do: [ :day |  html tableHeading class: 'mdl-color-text--grey-600'; with: day ] ] ]!
 
-renderMonthesOn: html	html mdlGrid		mdlTypographyTextCenter;		with: [ Date monthNames				do: [ :aString | 					html mdlCell						class: 'month-cell';						class: 'active' if: aString = self currentDate monthName;						onClick: (self jsGoToMonth: (Month indexOfMonth: aString) on: html);						desktopSize: 4;						with: aString ] ]!
+renderMonthesOn: html	html mdlGrid		mdlTypographyTextCenter;		with: [ Date monthNames				do: [ :aString | 					html mdlCell						class: 'month-cell';						class: 'mdl-color-text--primary' if: aString = self currentDate monthName;						class: 'mdl-color-text--primary-contrast' if: aString = self currentDate monthName;						class: 'mdl-color--primary' if: aString = self currentDate monthName;						class: 'active' if: aString = self currentDate monthName;						onClick: (self jsGoToMonth: (Month indexOfMonth: aString) on: html);						desktopSize: 4;						with: aString ] ]!
 
 renderWeeksOn: html	self currentDate asMonth weeks do: [ :aWeek | html tableRow: [ aWeek dates do: [ :aDate | self renderDate: aDate on: html ] ] ]!
 
@@ -84,7 +84,7 @@ renderYearsHeaderOn: html	self		renderYearsIntervalButtonWithIcon: 'navigate_b
 
 renderYearsIntervalButtonWithIcon: anIcon action: aSymbol on: html	html		mdlCellDesktop: 2		tablet: 1		phone: 1		with: [ html mdlButton				onClick: (((html jQuery id: self id) find: '.mdl-card__supporting-text') load html: [ :ajaxHtml | self perform: aSymbol. self renderYearsOn: ajaxHtml ]);				rippleEffect;				style: 'color: rgba(0,0,0,0.7)';				icon: anIcon ]!
 
-renderYearsOn: html	html mdlGrid		mdlTypographyTextCenter;		with: [ self renderYearsHeaderOn: html.			self calendar yearsInterval				do: [ :aYear | 					html mdlCell						class: 'year-cell';						class: 'active' if: aYear = self currentDate year;						onClick:							(html jQuery ajax								callback: [ self calendar goToYear: aYear ];								onComplete: (self jsOnCompleteScriptOn: html));						desktopSize: 4;						with: aYear greaseString ] ]!
+renderYearsOn: html	html mdlGrid		mdlTypographyTextCenter;		with: [ self renderYearsHeaderOn: html.			self calendar yearsInterval				do: [ :aYear |					html mdlCell						class: 'year-cell';						class: 'mdl-color-text--primary' if: aYear = self currentDate year;						class: 'mdl-color-text--primary-contrast' if: aYear = self currentDate year;						class: 'mdl-color--primary' if: aYear = self currentDate year;						class: 'active' if: aYear = self currentDate year;						onClick:							(html jQuery ajax								callback: [ self calendar goToYear: aYear ];								onComplete: (self jsOnCompleteScriptOn: html));						desktopSize: 4;						with: aYear greaseString ] ]!
 
 selectedDateIs: aDate	^ aDate = self currentDate! !
 !MDLFlatDatePicker categoriesFor: #calendar!accessing!public! !

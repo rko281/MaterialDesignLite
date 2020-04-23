@@ -6,7 +6,7 @@ MDLComponentDemo subclass: #MDLAnchorButtonsScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLAnchorButtonsScreen guid: (GUID fromString: '{dc26159e-deb0-4e65-8137-65b1a64d1d9c}')!
-MDLAnchorButtonsScreen comment: 'Description--------------------I''m the screen representing the anchor buttons'!
+MDLAnchorButtonsScreen comment: 'Variations on Material Design buttons like anchors.'!
 !MDLAnchorButtonsScreen categoriesForClass!Material-Design-Lite-Demo-Components! !
 !MDLAnchorButtonsScreen methodsFor!
 
@@ -102,12 +102,9 @@ renderScreenContentOn: html	self		render: self fabColoredButtons on: html;		r
 
 !MDLAnchorButtonsScreen class methodsFor!
 
-description	^ 'Variations on Material Design buttons like anchors.'!
-
 icon	^ 'compAnchorPng'!
 
 title	^ 'Anchor buttons'! !
-!MDLAnchorButtonsScreen class categoriesFor: #description!public!sections! !
 !MDLAnchorButtonsScreen class categoriesFor: #icon!accessing!public! !
 !MDLAnchorButtonsScreen class categoriesFor: #title!accessing!public! !
 

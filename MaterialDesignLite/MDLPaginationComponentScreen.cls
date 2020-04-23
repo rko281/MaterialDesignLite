@@ -6,7 +6,7 @@ MDLExtensionsDemo subclass: #MDLPaginationComponentScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLPaginationComponentScreen guid: (GUID fromString: '{f3c3fc2c-ec45-4421-90d0-eb4e405b8e13}')!
-MDLPaginationComponentScreen comment: 'Description--------------------The pagination widget allow the user to easily paginate some content on his page. You can either use it to just manage the pages then use the #currentPage to manage your page on the refresh or pass a block that will have the responsibility to update your page with some ajax.'!
+MDLPaginationComponentScreen comment: 'The pagination widget allow the user to easily paginate some content on his page. You can either use it to just manage the pages then use the #currentPage to manage your page on the refresh or pass a block that will have the responsibility to update your page with some ajax.'!
 !MDLPaginationComponentScreen categoriesForClass!Material-Design-Lite-Demo-Extensions! !
 !MDLPaginationComponentScreen methodsFor!
 
@@ -27,12 +27,9 @@ renderScreenContentOn: html	self		render: self pagination fullWidth: true on: 
 
 !MDLPaginationComponentScreen class methodsFor!
 
-description	^ 'The pagination widget allow the user to easily paginate some content on his page. You can either use it to just manage the pages then use the #currentPage to manage your page on the refresh or pass a block that will have the responsibility to update your page with some ajax.'!
-
 icon	^ 'paginationPng'!
 
 title	^ 'Pagination'! !
-!MDLPaginationComponentScreen class categoriesFor: #description!accessing!public! !
 !MDLPaginationComponentScreen class categoriesFor: #icon!accessing!public! !
 !MDLPaginationComponentScreen class categoriesFor: #title!accessing!public! !
 

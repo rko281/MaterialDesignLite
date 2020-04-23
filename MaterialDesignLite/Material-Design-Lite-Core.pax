@@ -5,8 +5,12 @@ package paxVersion: 1;
 Created by DuneST
 https://github.com/DuneSt/MaterialDesignLite
 
-Dolphin Smalltalk port created 26th May 2019
-https://github.com/rko281/MaterialDesignLite'.
+Dolphin Smalltalk port updated 23rd April 2020
+https://github.com/rko281/MaterialDesignLite
+
+"Launch the Demo"
+(WAHttpServerAdaptor port: 8080) start.
+ShellLibrary default shellOpen: ''http://localhost:8080/MDLDemo/'''.
 
 
 package classNames
@@ -32,7 +36,6 @@ package globalAliases: (Set new
 
 package setPrerequisites: #(
 	'..\Core\Object Arts\Dolphin\Base\Dolphin'
-	'..\Grease\Grease-Core'
 	'..\Seaside\JQuery\JQuery-Core'
 	'Material-Design-Lite-Utils'
 	'Material-Design-Lite-Widgets'
@@ -89,7 +92,14 @@ PackageManifest subclass: #ManifestMaterialDesignLiteCore
 
 !Object methodsFor!
 
-codeOf: aSymbol	"I take a method selector I contains and return his source code without the declaration."	^ String streamContents: [ :stream | (self class sourceCodeAt: aSymbol) lines allButFirst do: [ :ea | stream nextPutAll: ea ] separatedBy: [ stream nextPutAll: GRPlatform current newline ] ]!
+codeOf: aSymbol	"I take a method selector I contains and return his source code without the declaration."	^ String streamContents: 
+		[ :stream || readStream | 
+		readStream := (self class sourceCodeAt: aSymbol) readStream. 
+		readStream nextLine.
+		[readStream atEnd] whileFalse: 
+			[| line | 
+			stream nextPutAll: readStream nextLine.
+			readStream atEnd ifFalse: [stream cr]]]!
 
 isOnGemstone	"In Gemstone we load the package Matrial-Design-Lite-Gemstone which includes a MDLGemstone class. We can use this to know if we are on Gemstone."		^ Smalltalk hasClassNamed: #MDLGemstone! !
 !Object categoriesFor: #codeOf:!*Material/Design/Lite/Core!public! !

@@ -6,7 +6,7 @@ MDLComponentDemo subclass: #MDLSnackbarScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLSnackbarScreen guid: (GUID fromString: '{a6906ac6-787d-413a-a0d4-7c21ea7718de}')!
-MDLSnackbarScreen comment: 'I''m representing snackbar component screen'!
+MDLSnackbarScreen comment: 'Transient popup notifications.'!
 !MDLSnackbarScreen categoriesForClass!Material-Design-Lite-Demo-Components! !
 !MDLSnackbarScreen methodsFor!
 
@@ -27,12 +27,9 @@ toast	^ OrderedDictionary new		add: ' Toast' -> #renderToastOn:;		yourself! !
 
 !MDLSnackbarScreen class methodsFor!
 
-description	^ 'Transient popup notifications.'!
-
 icon	^ 'compsnackbarPng'!
 
 title	^ 'Snackbar'! !
-!MDLSnackbarScreen class categoriesFor: #description!accessing!public! !
 !MDLSnackbarScreen class categoriesFor: #icon!accessing!public! !
 !MDLSnackbarScreen class categoriesFor: #title!accessing!public! !
 

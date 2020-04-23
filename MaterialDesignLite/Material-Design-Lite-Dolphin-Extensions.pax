@@ -5,13 +5,18 @@ package paxVersion: 1;
 Created by DuneST
 https://github.com/DuneSt/MaterialDesignLite
 
-Dolphin Smalltalk port created 26th May 2019
-https://github.com/rko281/MaterialDesignLite'.
+Dolphin Smalltalk port updated 23rd April 2020
+https://github.com/rko281/MaterialDesignLite
+
+"Launch the Demo"
+(WAHttpServerAdaptor port: 8080) start.
+ShellLibrary default shellOpen: ''http://localhost:8080/MDLDemo/'''.
 
 
 package methodNames
 	add: 'MDLCalendar class' -> #new;
 	add: 'MDLSortableTableHeader class' -> #new;
+	add: 'MDLTableColumnDescription class' -> #new;
 	yourself.
 
 package binaryGlobalNames: (Set new
@@ -46,6 +51,13 @@ new
 
 	^super new initialize! !
 !MDLSortableTableHeader class categoriesFor: #new!public! !
+
+!MDLTableColumnDescription class methodsFor!
+
+new
+
+	^super new initialize! !
+!MDLTableColumnDescription class categoriesFor: #new!public! !
 
 "End of package definition"!
 

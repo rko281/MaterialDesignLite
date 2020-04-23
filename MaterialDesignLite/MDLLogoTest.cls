@@ -1,6 +1,6 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-MDLAbstractBrushTest subclass: #MDLLogoTest
+SGTAbstractBrushTest subclass: #MDLLogoTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''

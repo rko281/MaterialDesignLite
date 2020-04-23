@@ -6,7 +6,7 @@ MDLComponentDemo subclass: #MDLSlidersScreen
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
 MDLSlidersScreen guid: (GUID fromString: '{b51a4e87-546f-48c4-8bf4-be4d4d3ba74a}')!
-MDLSlidersScreen comment: 'I''m representing sliders components screen'!
+MDLSlidersScreen comment: 'Selecting a value out of a range.'!
 !MDLSlidersScreen categoriesForClass!Material-Design-Lite-Demo-Components! !
 !MDLSlidersScreen methodsFor!
 
@@ -33,12 +33,9 @@ simpleSliders	^ OrderedDictionary new		add: 'Default Slider' -> #renderDefault
 
 !MDLSlidersScreen class methodsFor!
 
-description	^ 'Selecting a value out of a range.'!
-
 icon	^ 'compslidersPng'!
 
 title	^ 'Sliders'! !
-!MDLSlidersScreen class categoriesFor: #description!accessing!public! !
 !MDLSlidersScreen class categoriesFor: #icon!accessing!public! !
 !MDLSlidersScreen class categoriesFor: #title!accessing!public! !
 
