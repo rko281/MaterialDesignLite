@@ -15,6 +15,8 @@ ShellLibrary default shellOpen: ''http://localhost:8080/MDLDemo/'''.
 
 package methodNames
 	add: 'MDLCalendar class' -> #new;
+	add: 'MDLExpansionStrategy class' -> #new;
+	add: 'MDLFooterAbstractSection class' -> #new;
 	add: 'MDLSortableTableHeader class' -> #new;
 	add: 'MDLTableColumnDescription class' -> #new;
 	yourself.
@@ -44,6 +46,20 @@ new
 
 	^super new initialize! !
 !MDLCalendar class categoriesFor: #new!public! !
+
+!MDLExpansionStrategy class methodsFor!
+
+new
+
+	^super new initialize! !
+!MDLExpansionStrategy class categoriesFor: #new!instance creation!public! !
+
+!MDLFooterAbstractSection class methodsFor!
+
+new
+
+	^super new initialize! !
+!MDLFooterAbstractSection class categoriesFor: #new!instance creation!public! !
 
 !MDLSortableTableHeader class methodsFor!
 
